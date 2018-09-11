@@ -26,8 +26,6 @@ public class DataCubeMaker {
 
 	private static final String RDF_DIRECTORY_DS = "src/main/resources/rdf/ds-";
 
-	private final static String BASE_URI = "http://id.linked-open-statistics.org/";
-
 	public static void main(String[] args) throws IOException {
 		traiterUneMeasure("occ_arr");
 		traiterUneMeasure("occ_ni");
@@ -39,16 +37,11 @@ public class DataCubeMaker {
 			Model tourismDepModel = ModelFactory.createDefaultModel();
 			tourismDepModel.setNsPrefix("xsd", XSD.getURI());
 			tourismDepModel.setNsPrefix("qb", DataCubeOntology.getURI());
-	
-			tourismDepModel.setNsPrefix("pop5-ds", "http://id.insee.fr/meta/demo/pop5/dataSet/");
-			tourismDepModel.setNsPrefix("pop5-obs", "http://id.insee.fr/meta/demo/pop5/observation/"); // TODO replace by call to dimensionURI("");
-			tourismDepModel.setNsPrefix("cog2017-dim", "http://id.insee.fr/meta/cog2017/dimension/");
+
 			tourismDepModel.setNsPrefix("dim", "http://id.insee.fr/meta/dimension/");
 			tourismDepModel.setNsPrefix("mes", "http://id.insee.fr/meta/mesure/");
-			Resource tourismDataSet = tourismDepModel.createResource(BASE_URI + "dataSet/tourism-nuts-nacer2-occ-arr", DataCubeOntology.DataSet);
+			Resource tourismDataSet = tourismDepModel.createResource(Configuration.BASE_URI + "dataSet/tourism-nuts-nacer2-occ-arr", DataCubeOntology.DataSet);
 	
-			//MEASURE	C_RESID	NUTS	NACE_R2	TIME_PERIOD	OBS_VALUE	OBS_STATUS	CONF_STATUS	UNIT
-
 			// Dimensions and measure
 			Property cresidDimensionProperty = tourismDepModel.createProperty(Configuration.componentURI("dimension", "C_RESID"));
 			Property nutsDimensionProperty = tourismDepModel.createProperty(Configuration.componentURI("dimension", "NUTS"));
