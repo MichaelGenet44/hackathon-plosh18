@@ -1,0 +1,35 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix los-codes: <http://id.linked-open-statistics.org/codes/> .
+@prefix los-concepts: <http://id.linked-open-statistics.org/concepts/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+los-concepts:Obs_status
+        a                rdfs:Class , owl:Class ;
+        rdfs:seeAlso     los-codes:obs_status ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:notation    "obs_status"@en ;
+        skos:prefLabel   "obs_status"@en .
+
+<http://id.linked-open-statistics.org/codes/obs_status/A>
+        a               skos:Concept , los-concepts:Obs_status ;
+        skos:inScheme   los-codes:obs_status ;
+        skos:notation   "A" ;
+        skos:prefLabel  "Normal value"@en .
+
+los-codes:obs_status  a  skos:ConceptScheme ;
+        rdfs:seeAlso    los-concepts:Obs_status ;
+        skos:notation   "obs_status" ;
+        skos:prefLabel  "obs_status label"@en .
+
+<http://id.linked-open-statistics.org/codes/obs_status/U>
+        a               skos:Concept , los-concepts:Obs_status ;
+        skos:inScheme   los-codes:obs_status ;
+        skos:notation   "U" ;
+        skos:prefLabel  "Unreliable"@en .
+
+<http://id.linked-open-statistics.org/codes/obs_status/E>
+        a               skos:Concept , los-concepts:Obs_status ;
+        skos:inScheme   los-codes:obs_status ;
+        skos:notation   "E" ;
+        skos:prefLabel  "Estimated value"@en .

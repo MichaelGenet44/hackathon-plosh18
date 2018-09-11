@@ -1,0 +1,116 @@
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+
+<http://id.insee.fr/meta/dimension/c_resid>
+        a              qb:CodedProperty , qb:DimensionProperty ;
+        rdfs:label     "c_resid"@fr ;
+        rdfs:range     <http://id.linked-open-statistics.org/concepts/C_resid> ;
+        dc:identifier  "C_RESID"@fr ;
+        qb:codeList    <http://id.linked-open-statistics.org/codes/c_resid> ;
+        qb:concept     <http://id.linked-open-statistics.org/concepts/C_RESID> .
+
+<http://id.insee.fr/meta/attribute/conf_status>
+        a              qb:CodedProperty , qb:AttributeProperty ;
+        rdfs:label     "conf_status"@fr ;
+        rdfs:range     <http://id.linked-open-statistics.org/concepts/Conf_status> ;
+        dc:identifier  "CONF_STATUS"@fr ;
+        qb:codeList    <http://id.linked-open-statistics.org/codes/conf_status> ;
+        qb:concept     <http://id.linked-open-statistics.org/concepts/CONF_STATUS> .
+
+<http://id.insee.fr/meta/attribute/obs_status>
+        a              qb:CodedProperty , qb:AttributeProperty ;
+        rdfs:label     "obs_status"@fr ;
+        rdfs:range     <http://id.linked-open-statistics.org/concepts/Obs_status> ;
+        dc:identifier  "OBS_STATUS"@fr ;
+        qb:codeList    <http://id.linked-open-statistics.org/codes/obs_status> ;
+        qb:concept     <http://id.linked-open-statistics.org/concepts/OBS_STATUS> .
+
+<http://id.insee.fr/meta/dimension/nace_r2>
+        a              qb:CodedProperty , qb:DimensionProperty ;
+        rdfs:label     "nace_r2"@fr ;
+        rdfs:range     <http://id.linked-open-statistics.org/concepts/Nace_r2> ;
+        dc:identifier  "NACE_R2"@fr ;
+        qb:codeList    <http://id.linked-open-statistics.org/codes/nace_r2> ;
+        qb:concept     <http://id.insee.fr/concepts/nafr2/groupe> .
+
+<http://id.linked-open-statistics.org/concepts/C_RESID>
+        a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label  "c_resid"@fr .
+
+<http://id.linked-open-statistics.org/concepts/CONF_STATUS>
+        a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label  "conf_status"@fr .
+
+<http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occar>
+        a              qb:DataStructureDefinition ;
+        rdfs:label     "Tourism industries  -  Annual occupancy of tourist accommodation establishments - Nights spent by residents and non-residents"@en ;
+        <http://purl.org/dc/elements/1.1/description>
+                "Nights by NUTS, NACE_R2 and Country of residence"@en ;
+        dc:identifier  "DSD-TOURISM-NUTS-NACER2-OCCAR"@fr ;
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/c_resid>
+                       ] ;
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/nace_r2>
+                       ] ;
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/nuts>
+                       ] ;
+        qb:component   [ a                       qb:ComponentSpecification ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/unit> ;
+                         qb:componentAttachment  qb:Observation
+                       ] ;
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  [ a  "http://purl.org/linked-data/sdmx/2009/dimension#timePeriod" ;
+                                   a       qb:DimensionProperty ]
+                       ] ;
+        qb:component   [ a           qb:ComponentSpecification ;
+                         qb:measure  <http://id.insee.fr/meta/mesure/tourism_occar>
+                       ] ;
+        qb:component   [ a                       qb:ComponentSpecification ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/conf_status> ;
+                         qb:componentAttachment  qb:Observation
+                       ] ;
+        qb:component   [ a                       qb:ComponentSpecification ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/obs_status> ;
+                         qb:componentAttachment  qb:Observation
+                       ] .
+
+<http://id.linked-open-statistics.org/concepts/OBS_STATUS>
+        a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label  "obs_status"@fr .
+
+<http://id.insee.fr/meta/mesure/tourism_occar>
+        a              qb:MeasureProperty ;
+        rdfs:label     "Arrivals of residents and non-residents"@en ;
+        rdfs:range     xsd:int ;
+        dc:identifier  "TOURISM_OCCAR"@en ;
+        qb:concept     <http://id.linked-open-statistics.org/concepts/TOURISM_OCCAR> .
+
+<http://id.linked-open-statistics.org/concepts/TOURISM_OCCAR>
+        a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label  "Arrivals of residents and non-residents"@en ;
+        <http://purl.org/dc/elements/1.1/description>
+                "An arrival is defined as a person (tourist) who arrives at a tourist accommodation establishment and checks in or arrives at non-rented accommodation. But in the scope of the Regulation concerning European statistics on tourism, this variable is not collected for the latter type of accommodation.\r\n\r\nStatistically there is not much difference if, instead of arrivals, departures are counted. No age limit is applied: children are counted as well as adults, even in the case when the overnight stays of children might be free of charge. Arrivals are registered by country of residence of the guest and by month. The arrivals of same-day visitors spending only a few hours during the day (no overnight stay, the date of arrival and departure are the same) at the establishment are excluded from accommodation statistics."@en .
+
+<http://id.insee.fr/meta/dimension/nuts>
+        a              qb:CodedProperty , qb:DimensionProperty ;
+        rdfs:label     "nuts"@fr ;
+        rdfs:range     <http://id.linked-open-statistics.org/concepts/Nuts> ;
+        dc:identifier  "NUTS"@fr ;
+        qb:codeList    <http://id.linked-open-statistics.org/codes/nuts> ;
+        qb:concept     <http://id.insee.fr/concepts/2112> .
+
+<http://id.insee.fr/meta/attribute/unit>
+        a              qb:CodedProperty , qb:AttributeProperty ;
+        rdfs:label     "unit"@fr ;
+        rdfs:range     <http://id.linked-open-statistics.org/concepts/Unit> ;
+        dc:identifier  "UNIT"@fr ;
+        qb:codeList    <http://id.linked-open-statistics.org/codes/unit> ;
+        qb:concept     <http://id.linked-open-statistics.org/concepts/UNIT> .
+
+<http://id.linked-open-statistics.org/concepts/UNIT>
+        a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label  "unit"@fr .

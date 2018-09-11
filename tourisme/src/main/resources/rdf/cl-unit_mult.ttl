@@ -1,0 +1,29 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix los-codes: <http://id.linked-open-statistics.org/codes/> .
+@prefix los-concepts: <http://id.linked-open-statistics.org/concepts/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.linked-open-statistics.org/codes/unit_mult/6.0>
+        a               skos:Concept , los-concepts:Unit_mult ;
+        skos:inScheme   los-codes:unit_mult ;
+        skos:notation   "6.0" ;
+        skos:prefLabel  "6.0"@en .
+
+los-concepts:Unit_mult
+        a                rdfs:Class , owl:Class ;
+        rdfs:seeAlso     los-codes:unit_mult ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:notation    "unit_mult"@en ;
+        skos:prefLabel   "unit_mult"@en .
+
+los-codes:unit_mult  a  skos:ConceptScheme ;
+        rdfs:seeAlso    los-concepts:Unit_mult ;
+        skos:notation   "unit_mult" ;
+        skos:prefLabel  "unit_mult label"@en .
+
+<http://id.linked-open-statistics.org/codes/unit_mult/3.0>
+        a               skos:Concept , los-concepts:Unit_mult ;
+        skos:inScheme   los-codes:unit_mult ;
+        skos:notation   "3.0" ;
+        skos:prefLabel  "3.0"@en .

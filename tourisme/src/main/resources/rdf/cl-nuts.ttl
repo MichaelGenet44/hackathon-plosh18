@@ -1,0 +1,472 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix los-codes: <http://id.linked-open-statistics.org/codes/> .
+@prefix los-concepts: <http://id.linked-open-statistics.org/concepts/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRY4>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRY4" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fry4" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRK>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRK" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frk" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR22>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR22" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr22" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR63>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR63" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr63" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRD1>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRD1" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frd1" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRA3>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRA3" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fra3" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR4>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR4" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr4" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRE>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRE" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fre" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR42>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR42" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr42" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRB0>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRB0" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frb0" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR83>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR83" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr83" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRF1>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRF1" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frf1" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRM0>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRM0" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frm0" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRJ2>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRJ2" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frj2" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRY3>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRY3" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fry3" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRJ>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRJ" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frj" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR21>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR21" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr21" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR62>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR62" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr62" .
+
+los-codes:nuts  a      skos:ConceptScheme ;
+        rdfs:seeAlso   los-concepts:NUTS ;
+        skos:notation  "nuts" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRA2>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRA2" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fra2" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR3>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR3" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr3" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRD>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRD" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frd" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR41>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR41" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr41" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR82>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR82" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr82" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR26>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR26" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr26" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRC2>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRC2" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frc2" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRJ1>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRJ1" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frj1" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR8>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR8" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr8" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRY2>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRY2" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fry2" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRI>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRI" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fri" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR61>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR61" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr61" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRA1>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRA1" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fra1" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRH0>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRH0" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frh0" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR2>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR2" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr2" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRE2>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRE2" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fre2" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRC>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRC" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frc" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRI3>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRI3" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fri3" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR81>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR81" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr81" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR53>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR53" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr53" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR25>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR25" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr25" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRC1>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRC1" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frc1" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR7>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR7" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr7" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRY1>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRY1" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fry1" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRH>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRH" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frh" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRY>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRY" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fry" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR1>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR1" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr1" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRE1>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRE1" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fre1" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRL0>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRL0" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frl0" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRB>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRB" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frb" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRI2>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRI2" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fri2" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR52>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR52" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr52" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRM>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRM" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frm" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR24>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR24" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr24" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRK2>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRK2" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frk2" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRA5>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRA5" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fra5" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR6>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR6" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr6" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRG>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRG" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frg" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR72>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR72" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr72" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRA>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRA" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fra" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRI1>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRI1" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fri1" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRF3>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRF3" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frf3" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR10>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR10" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr10" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRY5>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRY5" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fry5" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR51>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR51" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr51" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRL>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRL" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frl" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR23>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR23" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr23" .
+
+los-concepts:NUTS  a     rdfs:Class , owl:Class ;
+        rdfs:seeAlso     los-codes:nuts ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:notation    "nuts"@en ;
+        skos:prefLabel   "nuts"@en .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRG0>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRG0" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frg0" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRD2>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRD2" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frd2" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRK1>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRK1" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frk1" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRA4>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRA4" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fra4" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR5>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR5" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr5" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRF>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRF" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frf" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR30>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR30" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr30" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR71>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR71" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr71" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FR43>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FR43" ;
+        foaf:focus     "http://ec.europa.eu/nuts/fr43" .
+
+<http://id.linked-open-statistics.org/codes/nuts/FRF2>
+        a              skos:Concept , los-concepts:NUTS ;
+        skos:inScheme  los-codes:nuts ;
+        skos:notation  "FRF2" ;
+        foaf:focus     "http://ec.europa.eu/nuts/frf2" .
