@@ -99,6 +99,7 @@ public class CodelistMaker {
 		try (FileReader fileReader = new FileReader(NUTS_CSV)) {
 			CSVReader csvReader = new CSVReader(fileReader);
 			List<String> nuts = csvReader.readAll().stream().skip(1).map(line -> line[2]).collect(Collectors.toList());
+			csvReader.close();
 
 			// String nutsValues = new
 			// CSVReaderHeaderAware(fileReader).readMap().get("NUTS");
