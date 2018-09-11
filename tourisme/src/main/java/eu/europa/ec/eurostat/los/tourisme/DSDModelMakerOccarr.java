@@ -33,13 +33,13 @@ import eu.europa.ec.eurostat.los.utils.DataCubeOntology;
  * 
  * @author Franck
  */
-public class DSDModelMakerOccar {
+public class DSDModelMakerOccarr {
 
 	private static final String MEASURE_DESCRIPTION = "An arrival is defined as a person (tourist) who arrives at a tourist accommodation establishment and checks in or arrives at non-rented accommodation. But in the scope of the Regulation concerning European statistics on tourism, this variable is not collected for the latter type of accommodation.\r\n" + 
 			"\r\n" + 
 			"Statistically there is not much difference if, instead of arrivals, departures are counted. No age limit is applied: children are counted as well as adults, even in the case when the overnight stays of children might be free of charge. Arrivals are registered by country of residence of the guest and by month. The arrivals of same-day visitors spending only a few hours during the day (no overnight stay, the date of arrival and departure are the same) at the establishment are excluded from accommodation statistics.";
 
-	private static Logger logger = LogManager.getLogger(DSDModelMakerOccar.class);
+	private static Logger logger = LogManager.getLogger(DSDModelMakerOccarr.class);
 
 	private static Workbook wb = null;
 	
@@ -69,8 +69,8 @@ public class DSDModelMakerOccar {
 	private static final String BASE_URI = "http://id.linked-open-statistics.org/plosh/temp5/meta/";
 	private static final String TOURISME_URI = BASE_URI + "demo/tourism/";
 
-	public static final String POP_MEASURE_ID = "TOURISM_OCCAR";
-	public static final String POP_MEASURE_URI = "http://id.insee.fr/meta/mesure/tourism_occar";
+	public static final String POP_MEASURE_ID = "TOURISM_OCCARR";
+	public static final String POP_MEASURE_URI = "http://id.insee.fr/meta/mesure/tourism_occarr";
 	public static final String POP_MEASURE_NAME = "Arrivals of residents and non-residents";
 
 
@@ -104,7 +104,7 @@ public class DSDModelMakerOccar {
 		wb = new HSSFWorkbook(new FileInputStream(TOURISM_METADATA_FILE_NAME));
 
 		Model tourismeNutsNacer2 = getTourismeNutsNacer2Model();
-		RDFDataMgr.write(new FileOutputStream("src/main/resources/rdf/dsd-tourism-nuts-nacer2-occar.ttl"), tourismeNutsNacer2, Lang.TURTLE);
+		RDFDataMgr.write(new FileOutputStream("src/main/resources/rdf/dsd-tourism-nuts-nacer2-occarr.ttl"), tourismeNutsNacer2, Lang.TURTLE);
 	}
 
 	
@@ -120,10 +120,10 @@ public class DSDModelMakerOccar {
 		tourismeNutsNacer2Model.setNsPrefixes(DSD_PREFIXES);
 
 		// Creation of the DSD
-		Resource tourisme = tourismeNutsNacer2Model.createResource(dsdURI("nuts-nacer2-occar"), DataCubeOntology.DataStructureDefinition);
+		Resource tourisme = tourismeNutsNacer2Model.createResource(dsdURI("nuts-nacer2-occarr"), DataCubeOntology.DataStructureDefinition);
 		tourisme.addProperty(RDFS.label, tourismeNutsNacer2Model.createLiteral("Tourism industries  -  Annual occupancy of tourist accommodation establishments - Nights spent by residents and non-residents", "en"));
 		tourisme.addProperty(DC.description, tourismeNutsNacer2Model.createLiteral("Nights by NUTS, NACE_R2 and Country of residence", "en"));
-		tourisme.addProperty(DCTerms.identifier, tourismeNutsNacer2Model.createLiteral("DSD-TOURISM-NUTS-NACER2-OCCAR", "fr"));
+		tourisme.addProperty(DCTerms.identifier, tourismeNutsNacer2Model.createLiteral("DSD-TOURISM-NUTS-NACER2-OCCARR", "fr"));
 		logger.info("Creating DSD " + tourisme.getURI());
 
 		Sheet feuilleDSD = wb.getSheet("DSD-tourism_nuts_nace_r2");

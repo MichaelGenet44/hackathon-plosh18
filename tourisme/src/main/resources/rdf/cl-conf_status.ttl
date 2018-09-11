@@ -10,11 +10,6 @@
         skos:notation   "C" ;
         skos:prefLabel  "Confidential statistical information"@en .
 
-<http://id.linked-open-statistics.org/codes/conf_status/,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,++++++++++++++++++++++++++++++++++++++++++++++++++++++++>
-        a              skos:Concept , los-concepts:Conf_status ;
-        skos:inScheme  los-codes:conf_status ;
-        skos:notation  ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,++++++++++++++++++++++++++++++++++++++++++++++++++++++++" .
-
 <http://id.linked-open-statistics.org/codes/conf_status/F>
         a               skos:Concept , los-concepts:Conf_status ;
         skos:inScheme   los-codes:conf_status ;

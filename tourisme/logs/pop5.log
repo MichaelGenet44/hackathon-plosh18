@@ -101,3 +101,25 @@
 2018-09-11 17:13:36 - 3089 [main] INFO  DSDModelMakerOccar 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occar
 =======
 >>>>>>> ea9dfb964d983cd34d4a57adfaae3677ece510c5
+2018-09-11 17:29:44 - 3556 [main] INFO  DSDModelMakerOccar 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occarr
+2018-09-11 17:34:34 - 3089 [main] INFO  DSDModelMakerOccarr 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occarr
+2018-09-11 17:34:54 - 3432 [main] INFO  DSDModelMakerOccni 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occni
+2018-09-11 17:36:50 - 3323 [main] INFO  DSDModelMakerOccni 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occni
+2018-09-11 17:36:59 - 3120 [main] INFO  CodelistMaker 	 import code list normal (feuille C_RESID - nb cell 2)
+2018-09-11 17:36:59 - 3121 [main] INFO  CodelistMaker 	 import code list normal (feuille DEGURBA - nb cell 2)
+2018-09-11 17:36:59 - 3121 [main] INFO  CodelistMaker 	 import code list normal (feuille TERRTYPO - nb cell 2)
+2018-09-11 17:36:59 - 3121 [main] INFO  CodelistMaker 	 import code list normal (feuille OBS_STATUS - nb cell 2)
+2018-09-11 17:36:59 - 3121 [main] INFO  CodelistMaker 	 import code list normal (feuille CONF_STATUS - nb cell 2)
+2018-09-11 17:39:43 - 3323 [main] INFO  CodelistMaker 	 import code list normal (feuille C_RESID - nb cell 2)
+2018-09-11 17:39:43 - 3324 [main] INFO  CodelistMaker 	 import code list normal (feuille DEGURBA - nb cell 2)
+2018-09-11 17:39:43 - 3324 [main] INFO  CodelistMaker 	 import code list normal (feuille TERRTYPO - nb cell 2)
+2018-09-11 17:39:43 - 3324 [main] INFO  CodelistMaker 	 import code list normal (feuille OBS_STATUS - nb cell 2)
+2018-09-11 17:39:44 - 3355 [main] INFO  CodelistMaker 	 import code list normal (feuille CONF_STATUS - nb cell 2)
+2018-09-11 17:43:17 - 3166 [main] INFO  CodelistMaker 	 import code list normal (feuille C_RESID - nb cell 2)
+2018-09-11 17:43:17 - 3182 [main] INFO  CodelistMaker 	 import code list normal (feuille DEGURBA - nb cell 2)
+2018-09-11 17:43:17 - 3182 [main] INFO  CodelistMaker 	 import code list normal (feuille TERRTYPO - nb cell 2)
+2018-09-11 17:43:17 - 3183 [main] INFO  CodelistMaker 	 import code list normal (feuille OBS_STATUS - nb cell 2)
+2018-09-11 17:43:17 - 3183 [main] INFO  CodelistMaker 	 import code list normal (feuille CONF_STATUS - nb cell 2)
+2018-09-11 17:43:17 - 3183 [main] INFO  CodelistMaker 	 import code list normal (feuille UNIT - nb cell 2)
+2018-09-11 17:43:17 - 3214 [main] INFO  CodelistMaker 	 import code list normal (feuille UNIT_MULT - nb cell 2)
+2018-09-11 17:43:17 - 3230 [main] INFO  CodelistMaker 	 importNuts
