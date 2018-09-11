@@ -79,8 +79,8 @@ public class CodelistMaker {
 
 		
 		// Create the concept scheme and the associated concept for the second level
-		conceptName = normalize(clSheet.getRow(0).getCell(0).toString());
-		clName = clSheet.getRow(0).getCell(1).toString();
+		conceptName = normalize(clSheet.getRow(0).getCell(2).toString());
+		clName = clSheet.getRow(0).getCell(3).toString();
 		
 		Resource schemeLevel2 = clModel.createResource(clURI, SKOS.ConceptScheme);
 		schemeLevel2.addProperty(SKOS.prefLabel, clName, "en");
