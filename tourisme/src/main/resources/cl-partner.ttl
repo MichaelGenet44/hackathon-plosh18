@@ -1,0 +1,423 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix los-codes: <http://id.linked-open-statistics.org/codes/> .
+@prefix los-concepts: <http://id.linked-open-statistics.org/concepts/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.linked-open-statistics.org/codes/partner/EL>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "EL" ;
+        skos:prefLabel  "Greece"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/PL>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "PL" ;
+        skos:prefLabel  "Poland"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/JP>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/ASI" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "JP" ;
+        skos:prefLabel  "Japan"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/WRL_NAL>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "WRL_NAL" ;
+        skos:prefLabel  "World - not allocated"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/HU>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "HU" ;
+        skos:prefLabel  "Hungary"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/LV>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "LV" ;
+        skos:prefLabel  "Latvia"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/FI>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "FI" ;
+        skos:prefLabel  "Finland"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/AFR>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "AFR" ;
+        skos:prefLabel  "Africa"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/TR>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "TR" ;
+        skos:prefLabel  "Turkey"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/EUR>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "EUR" ;
+        skos:prefLabel  "Europe"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/EU28>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "EU28" ;
+        skos:prefLabel  "European Union (28 countries)"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/SI>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "SI" ;
+        skos:prefLabel  "Slovenia"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/AME_C_S>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/AME" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "AME_C_S" ;
+        skos:prefLabel  "Central and South America"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/AME>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "AME" ;
+        skos:prefLabel  "America"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/AU>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/OCE" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "AU" ;
+        skos:prefLabel  "Australia"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/KR>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/ASI" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "KR" ;
+        skos:prefLabel  "Republic of Korea"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/EE>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "EE" ;
+        skos:prefLabel  "Estonia"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/ASI_OTH>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/ASI" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "ASI_OTH" ;
+        skos:prefLabel  "Other Asian countries"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/BG>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "BG" ;
+        skos:prefLabel  "Bulgaria"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/OCE>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "OCE" ;
+        skos:prefLabel  "Australia, Oceania and other territories;"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/LU>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "LU" ;
+        skos:prefLabel  "Luxembourg"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/AME_N_OTH>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/AME" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "AME_N_OTH" ;
+        skos:prefLabel  "Other Northern American countries"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/AFR_OTH>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/AFR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "AFR_OTH" ;
+        skos:prefLabel  "Other African countries"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/BR>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/AME" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "BR" ;
+        skos:prefLabel  "Brazil"@en .
+
+los-concepts:CODE-Level-1
+        a                rdfs:Class , owl:Class ;
+        rdfs:seeAlso     los-codes:partner ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:notation    "partner"@en ;
+        skos:prefLabel   "partner"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/NO>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "NO" ;
+        skos:prefLabel  "Norway"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/AT>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "AT" ;
+        skos:prefLabel  "Austria"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/IE>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "IE" ;
+        skos:prefLabel  "Ireland"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/LT>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "LT" ;
+        skos:prefLabel  "Lithuania"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/ZA>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/AFR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "ZA" ;
+        skos:prefLabel  "South Africa"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/CZ>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "CZ" ;
+        skos:prefLabel  "Czech Republic"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/FR>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "FR" ;
+        skos:prefLabel  "France"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/US>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/AME" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "US" ;
+        skos:prefLabel  "United States"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/RU>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "RU" ;
+        skos:prefLabel  "Russia"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/WORLD>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "WORLD" ;
+        skos:prefLabel  "World"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/CN>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/ASI" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "CN" ;
+        skos:prefLabel  "China (including Hong Kong)"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/RO>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "RO" ;
+        skos:prefLabel  "Romania"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/HR>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "HR" ;
+        skos:prefLabel  "Croatia"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/BE>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "BE" ;
+        skos:prefLabel  "Belgium"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/PT>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "PT" ;
+        skos:prefLabel  "Portugal"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/CY>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "CY" ;
+        skos:prefLabel  "Cyprus"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/DK>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "DK" ;
+        skos:prefLabel  "Denmark"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/DE>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "DE" ;
+        skos:prefLabel  "Germany (including  former GDR from 1991)"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/UA>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "UA" ;
+        skos:prefLabel  "Ukraine"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/EUR_OTH>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "EUR_OTH" ;
+        skos:prefLabel  "Other European countries"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/EFTA>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "EFTA" ;
+        skos:prefLabel  "European Free Trade Association"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/ES>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "ES" ;
+        skos:prefLabel  "Spain"@en .
+
+los-codes:partner  a    skos:ConceptScheme ;
+        rdfs:seeAlso    los-concepts:CODE-Level-1 ;
+        skos:notation   "partner" ;
+        skos:prefLabel  "LABEL Level 1"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/IT>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "IT" ;
+        skos:prefLabel  "Italy"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/ASI>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "ASI" ;
+        skos:prefLabel  "Asia"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/SK>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "SK" ;
+        skos:prefLabel  "Slovakia"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/CA>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/AME" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "CA" ;
+        skos:prefLabel  "Canada"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/AME_N>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/AME" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "AME_N" ;
+        skos:prefLabel  "Northern America"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/CH_LI>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "CH_LI" ;
+        skos:prefLabel  "Switzerland and Liechtenstein"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/SE>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "SE" ;
+        skos:prefLabel  "Sweden"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/NL>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "NL" ;
+        skos:prefLabel  "Netherlands"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/UK>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "UK" ;
+        skos:prefLabel  "United Kingdom"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/IS>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "IS" ;
+        skos:prefLabel  "Iceland"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/AME_C_S_OTH>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/AME" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "AME_C_S_OTH" ;
+        skos:prefLabel  "Other Central or South American countries"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/MT>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/EUR" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "MT" ;
+        skos:prefLabel  "Malta"@en .
+
+<http://id.linked-open-statistics.org/codes/partner/OCE_OTH>
+        a               skos:Concept , los-concepts:CODE-Level-1 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/partner/OCE" ;
+        skos:inScheme   los-codes:partner ;
+        skos:notation   "OCE_OTH" ;
+        skos:prefLabel  "Oceania and other territories"@en .
