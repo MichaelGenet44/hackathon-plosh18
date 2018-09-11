@@ -1,0 +1,34 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix los-codes: <http://id.linked-open-statistics.org/codes/> .
+@prefix los-concepts: <http://id.linked-open-statistics.org/concepts/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.linked-open-statistics.org/codes/unit/EURO>
+        a               skos:Concept , los-concepts:CODE ;
+        skos:inScheme   los-codes:unit ;
+        skos:notation   "EURO" ;
+        skos:prefLabel  "Euro"@fr .
+
+los-concepts:CODE  a     rdfs:Class , owl:Class ;
+        rdfs:seeAlso     los-codes:unit ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:notation    "unit"@fr ;
+        skos:prefLabel   "unit"@fr .
+
+<http://id.linked-open-statistics.org/codes/unit/PC_TOT>
+        a               skos:Concept , los-concepts:CODE ;
+        skos:inScheme   los-codes:unit ;
+        skos:notation   "PC_TOT" ;
+        skos:prefLabel  "Percentage of total"@fr .
+
+<http://id.linked-open-statistics.org/codes/unit/NR>
+        a               skos:Concept , los-concepts:CODE ;
+        skos:inScheme   los-codes:unit ;
+        skos:notation   "NR" ;
+        skos:prefLabel  "Number"@fr .
+
+los-codes:unit  a       skos:ConceptScheme ;
+        rdfs:seeAlso    los-concepts:CODE ;
+        skos:notation   "unit" ;
+        skos:prefLabel  "LABEL"@fr .

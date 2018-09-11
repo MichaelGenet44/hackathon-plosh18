@@ -1,0 +1,28 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix los-codes: <http://id.linked-open-statistics.org/codes/> .
+@prefix los-concepts: <http://id.linked-open-statistics.org/concepts/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.linked-open-statistics.org/codes/c_resid/NAT>
+        a               skos:Concept , los-concepts:CODE ;
+        skos:inScheme   los-codes:c_resid ;
+        skos:notation   "NAT" ;
+        skos:prefLabel  "Reporting country"@fr .
+
+los-codes:c_resid  a    skos:ConceptScheme ;
+        rdfs:seeAlso    los-concepts:CODE ;
+        skos:notation   "c_resid" ;
+        skos:prefLabel  "LABEL"@fr .
+
+los-concepts:CODE  a     rdfs:Class , owl:Class ;
+        rdfs:seeAlso     los-codes:c_resid ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:notation    "c_resid"@fr ;
+        skos:prefLabel   "c_resid"@fr .
+
+<http://id.linked-open-statistics.org/codes/c_resid/FOR>
+        a               skos:Concept , los-concepts:CODE ;
+        skos:inScheme   los-codes:c_resid ;
+        skos:notation   "FOR" ;
+        skos:prefLabel  "Foreign country"@fr .

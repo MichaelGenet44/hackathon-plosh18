@@ -30,7 +30,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 
 import com.opencsv.CSVReader;
 
-
 public class CodelistMaker {
 	private static Logger logger = LogManager.getLogger(CodelistMaker.class);
 	private static final String NUTS = "nuts";
@@ -43,7 +42,7 @@ public class CodelistMaker {
 	public final static String BASE_URI = "http://id.linked-open-statistics.org/";
 	public final static String CODES_BASE_URI = BASE_URI + "codes/";
 	public final static String CONCEPTS_BASE_URI = BASE_URI + "concepts/";
-	
+
 	public final static String BASE_URI_NUTS = "http://ec.europa.eu/nuts/";
 
 	private static CSVReader csvReader;
@@ -51,34 +50,35 @@ public class CodelistMaker {
 	public static void main(String[] args) throws IOException {
 
 		wb = new HSSFWorkbook(new FileInputStream(EXCEL_FILE_NAME));
+		Iterator<Sheet> sheetsIterator = wb.iterator();
+		while (sheetsIterator.hasNext()) {
+			Sheet sheet = (Sheet) sheetsIterator.next();
+			String clTag = normalize(sheet.getSheetName().trim().toLowerCase());
+			if (!StringUtils.containsIgnoreCase(clTag, "Scope") && !StringUtils.containsIgnoreCase(clTag, "DSD")
+					&& sheet.getRow(0).getLastCellNum() == 2) {
+				logger.info(String.format("import code list normal (feuille %s - nb cell %d)", sheet.getSheetName(),
+						sheet.getRow(0).getLastCellNum()));
+				Model codelistModel = createConceptScheme(clTag, sheet);
+				RDFDataMgr.write(new FileOutputStream("src/main/resources/cl-" + clTag + ".ttl"), codelistModel,
+						Lang.TURTLE);
+			}
+		}
 		importNuts();
 		Sheet partnerSheet = wb.getSheet("PARTNER");
 		String clTag = "partner";
 		Model codelistModel = createPartnerConceptScheme(clTag, partnerSheet);
 		RDFDataMgr.write(new FileOutputStream("src/main/resources/cl-" + clTag + ".ttl"), codelistModel, Lang.TURTLE);
 
-//		Iterator<Sheet> sheetIterator = wb.sheetIterator();
-//		while (sheetIterator.hasNext()) {
-//
-//			Sheet clSheet = sheetIterator.next();
-//			String clTag = normalize(clSheet.getSheetName().trim().toLowerCase());
-//
-//			Model codelistModel = createConceptScheme(clTag, clSheet);
-//			RDFDataMgr.write(new FileOutputStream("src/main/resources/cl-" + clTag + ".ttl"), codelistModel, Lang.TURTLE);
-//		}
 	}
 
 	private static void importNuts() throws FileNotFoundException {
 		logger.info("importNuts");
 		try (FileReader fileReader = new FileReader(NUTS_CSV)) {
 			csvReader = new CSVReader(fileReader);
-			List<String> nuts= csvReader.readAll()
-					.stream()
-					.skip(1)
-					.map(line -> line[2])
-					.collect(Collectors.toList());
+			List<String> nuts = csvReader.readAll().stream().skip(1).map(line -> line[2]).collect(Collectors.toList());
 
-			//String nutsValues = new CSVReaderHeaderAware(fileReader).readMap().get("NUTS");
+			// String nutsValues = new
+			// CSVReaderHeaderAware(fileReader).readMap().get("NUTS");
 			Model codelistModel = createNutsConceptScheme(nuts);
 			RDFDataMgr.write(new FileOutputStream("src/main/resources/cl-nuts.ttl"), codelistModel, Lang.TURTLE);
 		} catch (IOException e) {
@@ -111,19 +111,19 @@ public class CodelistMaker {
 		concept.addProperty(SKOS.notation, clModel.createLiteral(NUTS, "en"));
 		scheme.addProperty(RDFS.seeAlso, concept);
 		concept.addProperty(RDFS.seeAlso, scheme);
-		
-		nutsValues.stream().forEach(nut -> truc(nut, clModel,scheme, concept));
+
+		nutsValues.stream().forEach(nut -> truc(nut, clModel, scheme, concept));
 
 		return clModel;
 	}
 
-	private static void truc(String itemCode, Model clModel,Resource scheme,Resource concept) {
+	private static void truc(String itemCode, Model clModel, Resource scheme, Resource concept) {
 		String parentURI = CODES_BASE_URI + NUTS + "/" + itemCode;
 		Resource item = clModel.createResource(parentURI, concept);
 		item.addProperty(RDF.type, SKOS.Concept);
 		item.addProperty(SKOS.notation, itemCode);
 		item.addProperty(SKOS.inScheme, scheme);
-		item.addProperty(FOAF.focus, BASE_URI_NUTS+itemCode.toLowerCase());
+		item.addProperty(FOAF.focus, BASE_URI_NUTS + itemCode.toLowerCase());
 	}
 
 	public static Model createPartnerConceptScheme(String clTag, Sheet clSheet) {
@@ -233,13 +233,15 @@ public class CodelistMaker {
 		rowIterator.next();
 		while (rowIterator.hasNext()) {
 			Row currentRow = rowIterator.next();
-			String itemCode = currentRow.getCell(0).toString().trim();
-			String itemName = currentRow.getCell(1).toString().trim();
-			Resource item = clModel.createResource(clURI + "/" + itemCode, concept);
-			item.addProperty(RDF.type, SKOS.Concept);
-			item.addProperty(SKOS.notation, itemCode);
-			item.addProperty(SKOS.prefLabel, clModel.createLiteral(itemName, "fr"));
-			item.addProperty(SKOS.inScheme, scheme);
+			if (currentRow.getCell(0) != null && currentRow.getCell(1) != null) {
+				String itemCode = currentRow.getCell(0).toString().trim();
+				String itemName = currentRow.getCell(1).toString().trim();
+				Resource item = clModel.createResource(clURI + "/" + itemCode, concept);
+				item.addProperty(RDF.type, SKOS.Concept);
+				item.addProperty(SKOS.notation, itemCode);
+				item.addProperty(SKOS.prefLabel, clModel.createLiteral(itemName, "fr"));
+				item.addProperty(SKOS.inScheme, scheme);
+			}
 		}
 
 		return clModel;
