@@ -5,24 +5,24 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
 <http://id.linked-open-statistics.org/codes/c_resid/NAT>
-        a               skos:Concept , los-concepts:CODE ;
+        a               skos:Concept , los-concepts:C_resid ;
         skos:inScheme   los-codes:c_resid ;
         skos:notation   "NAT" ;
-        skos:prefLabel  "Reporting country"@fr .
+        skos:prefLabel  "Reporting country"@en .
 
 los-codes:c_resid  a    skos:ConceptScheme ;
-        rdfs:seeAlso    los-concepts:CODE ;
+        rdfs:seeAlso    los-concepts:C_resid ;
         skos:notation   "c_resid" ;
-        skos:prefLabel  "LABEL"@fr .
+        skos:prefLabel  "c_resid label"@en .
 
-los-concepts:CODE  a     rdfs:Class , owl:Class ;
+los-concepts:C_resid  a  rdfs:Class , owl:Class ;
         rdfs:seeAlso     los-codes:c_resid ;
         rdfs:subClassOf  skos:Concept ;
-        skos:notation    "c_resid"@fr ;
-        skos:prefLabel   "c_resid"@fr .
+        skos:notation    "c_resid"@en ;
+        skos:prefLabel   "c_resid"@en .
 
 <http://id.linked-open-statistics.org/codes/c_resid/FOR>
-        a               skos:Concept , los-concepts:CODE ;
+        a               skos:Concept , los-concepts:C_resid ;
         skos:inScheme   los-codes:c_resid ;
         skos:notation   "FOR" ;
-        skos:prefLabel  "Foreign country"@fr .
+        skos:prefLabel  "Foreign country"@en .

@@ -1,0 +1,49 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix los-codes: <http://id.linked-open-statistics.org/codes/> .
+@prefix los-concepts: <http://id.linked-open-statistics.org/concepts/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://id.linked-open-statistics.org/codes/nace_r2/I552>
+        a               skos:Concept , los-concepts:Nace_r2 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553" ;
+        skos:inScheme   los-codes:nace_r2 ;
+        skos:notation   "I552" ;
+        skos:prefLabel  "Holiday and other short-stay accommodation"@en ;
+        foaf:focus      "http://id.insee.fr/codes/nafr2/groupes/55.2" .
+
+los-concepts:Nace_r2  a  rdfs:Class , owl:Class ;
+        rdfs:seeAlso     los-codes:nace_r2 ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:notation    "nace_r2"@en ;
+        skos:prefLabel   "nace_r2"@en .
+
+los-codes:nace_r2  a    skos:ConceptScheme ;
+        rdfs:seeAlso    los-concepts:Nace_r2 ;
+        skos:notation   "nace_r2" ;
+        skos:prefLabel  "nace_r2 label"@en .
+
+<http://id.linked-open-statistics.org/codes/nace_r2/I553>
+        a               skos:Concept , los-concepts:Nace_r2 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553" ;
+        skos:inScheme   los-codes:nace_r2 ;
+        skos:notation   "I553" ;
+        skos:prefLabel  "Camping grounds, recreational vehicle parks and trailer parks"@en ;
+        foaf:focus      "http://id.insee.fr/codes/nafr2/groupes/55.3" .
+
+<http://id.linked-open-statistics.org/codes/nace_r2/I551>
+        a               skos:Concept , los-concepts:Nace_r2 ;
+        skos:broader    "http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553" ;
+        skos:inScheme   los-codes:nace_r2 ;
+        skos:notation   "I551" ;
+        skos:prefLabel  "Hotels and similar establishments"@en ;
+        foaf:focus      "http://id.insee.fr/codes/nafr2/groupes/55.1" .
+
+<http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553>
+        a                  skos:Concept , los-concepts:Nace_r2 ;
+        skos:inScheme      los-codes:nace_r2 ;
+        skos:narrower      "http://id.linked-open-statistics.org/codes/nace_r2/I553" , "http://id.linked-open-statistics.org/codes/nace_r2/I552" , "http://id.linked-open-statistics.org/codes/nace_r2/I551" ;
+        skos:notation      "I551TOI553" ;
+        skos:prefLabel     "All types of tourist accommodation establishments"@en ;
+        skos:topConceptOf  los-concepts:Nace_r2 .
