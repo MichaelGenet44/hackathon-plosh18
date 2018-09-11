@@ -1,0 +1,29 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix los-codes: <http://id.linked-open-statistics.org/codes/> .
+@prefix los-concepts: <http://id.linked-open-statistics.org/concepts/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+los-codes:terrtypo  a   skos:ConceptScheme ;
+        rdfs:seeAlso    los-concepts:Terrtypo ;
+        skos:notation   "terrtypo" ;
+        skos:prefLabel  "terrtypo label"@en .
+
+<http://id.linked-open-statistics.org/codes/terrtypo/NCST_A>
+        a               skos:Concept , los-concepts:Terrtypo ;
+        skos:inScheme   los-codes:terrtypo ;
+        skos:notation   "NCST_A" ;
+        skos:prefLabel  "Non-coastal areas"@en .
+
+<http://id.linked-open-statistics.org/codes/terrtypo/CST_A>
+        a               skos:Concept , los-concepts:Terrtypo ;
+        skos:inScheme   los-codes:terrtypo ;
+        skos:notation   "CST_A" ;
+        skos:prefLabel  "Coastal areas"@en .
+
+los-concepts:Terrtypo
+        a                rdfs:Class , owl:Class ;
+        rdfs:seeAlso     los-codes:terrtypo ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:notation    "terrtypo"@en ;
+        skos:prefLabel   "terrtypo"@en .

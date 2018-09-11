@@ -1,0 +1,34 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix los-codes: <http://id.linked-open-statistics.org/codes/> .
+@prefix los-concepts: <http://id.linked-open-statistics.org/concepts/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.linked-open-statistics.org/codes/degurba/DEG3>
+        a               skos:Concept , los-concepts:Degurba ;
+        skos:inScheme   los-codes:degurba ;
+        skos:notation   "DEG3" ;
+        skos:prefLabel  "thinly-populated area"@en .
+
+los-concepts:Degurba  a  rdfs:Class , owl:Class ;
+        rdfs:seeAlso     los-codes:degurba ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:notation    "degurba"@en ;
+        skos:prefLabel   "degurba"@en .
+
+<http://id.linked-open-statistics.org/codes/degurba/DEG1>
+        a               skos:Concept , los-concepts:Degurba ;
+        skos:inScheme   los-codes:degurba ;
+        skos:notation   "DEG1" ;
+        skos:prefLabel  "densely-populated area"@en .
+
+los-codes:degurba  a    skos:ConceptScheme ;
+        rdfs:seeAlso    los-concepts:Degurba ;
+        skos:notation   "degurba" ;
+        skos:prefLabel  "degurba label"@en .
+
+<http://id.linked-open-statistics.org/codes/degurba/DEG2>
+        a               skos:Concept , los-concepts:Degurba ;
+        skos:inScheme   los-codes:degurba ;
+        skos:notation   "DEG2" ;
+        skos:prefLabel  "intermediate density area"@en .
