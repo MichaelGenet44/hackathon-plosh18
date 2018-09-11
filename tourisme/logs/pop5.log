@@ -84,6 +84,7 @@
 2018-09-11 13:57:30 - 3090 [main] INFO  CodelistMaker 	 import code list normal (feuille UNIT - nb cell 2)
 2018-09-11 13:57:30 - 3121 [main] INFO  CodelistMaker 	 import code list normal (feuille UNIT_MULT - nb cell 2)
 2018-09-11 13:57:30 - 3121 [main] INFO  CodelistMaker 	 importNuts
+<<<<<<< HEAD
 2018-09-11 14:49:22 - 3214 [main] INFO  DSDModelMaker 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occni
 2018-09-11 14:52:52 - 3354 [main] INFO  DSDModelMaker 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occni
 2018-09-11 14:56:21 - 10024 [main] INFO  DSDModelMaker 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occni
@@ -98,3 +99,5 @@
 2018-09-11 16:53:52 - 3432 [main] INFO  DSDModelMaker 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occni
 2018-09-11 17:13:27 - 5039 [main] INFO  DSDModelMakerOccni 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occni
 2018-09-11 17:13:36 - 3089 [main] INFO  DSDModelMakerOccar 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occar
+=======
+>>>>>>> ea9dfb964d983cd34d4a57adfaae3677ece510c5
