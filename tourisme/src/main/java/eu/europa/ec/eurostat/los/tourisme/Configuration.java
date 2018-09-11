@@ -17,14 +17,12 @@ import eu.europa.ec.eurostat.los.utils.DataCubeOntology;
 
 public class Configuration {
 
-	public static final int REFERENCE_YEAR = 2015;
-	public static final int REFERENCE_YEAR_GEO = REFERENCE_YEAR + 2;
 	public static final String INSEE_SPARQL_ENDPOINT = "http://id.insee.fr/sparql";
 
-	/** Name of the Excel file containing the POP5 data
-	 * The source file is at https://insee.fr/fr/statistiques/3561090?sommaire=3561107 */
-	public final static String POP5_FILE_NAME = "src/main/resources/data/BTX_TD_POP5_" + REFERENCE_YEAR + ".xls";
-	public final static int FIRST_DATA_LINE_INDEX = 11;
+	/** Names of the Excel files containing the TOURISM data and metadata
+	 * The source file is at https://github.com/LOS-ESSnet/Paris-Hackathon/blob/master/data/tourism-fr.md */
+	public final static String TOURISM_DATA_FILE_NAME = "src/main/resources/data/tourism-nuts-nace-r2-fr.csv";
+	public final static String TOURISM_METADATA_FILE_NAME = "src/main/resources/data/tourism-fr-dsd-1.ods";
 
 	/** Prefix mappings */
 	public static Map<String, String> DSD_PREFIXES = new HashMap<String, String>();
@@ -35,6 +33,7 @@ public class Configuration {
 		DSD_PREFIXES.put("dc", DCTerms.getURI());		
 		DSD_PREFIXES.put("xsd", XSD.getURI());
 	}
+	
 	public static Map<String, String> CONCEPT_SCHEME_PREFIXES = new HashMap<String, String>();
 	static {
 		CONCEPT_SCHEME_PREFIXES.put("rdfs", RDFS.getURI());
@@ -48,8 +47,8 @@ public class Configuration {
 	public final static List<String> VARIABLE_DEFINITIONS = Arrays.asList("8-10", "12-23", "25-31");
 	public final static String HEADER_LINE_INDEXES = "5-7";
 
-	public static final String BASE_URI = "http://id.insee.fr/meta/";
-	public static final String POP5_BASE_URI = BASE_URI + "demo/pop5/";
+	public static final String BASE_URI = "http://id.linked-open-statistics.org/plosh/temp5/meta/";
+	public static final String POP5_BASE_URI = BASE_URI + "demo/tourism/";
 
 	public static final String POP_MEASURE_ID = "POP15PLUS";
 	public static final String POP_MEASURE_URI = "http://id.insee.fr/meta/mesure/pop15Plus";
@@ -58,38 +57,38 @@ public class Configuration {
 	public static final String SDMX_OBS_VALUE_MEASURE_URI = "http://purl.org/linked-data/sdmx/2009/measure#obsValue";
 
 	/** Naming constants and methods for geographic components */
-	public static String COG_BASE_CODE_URI = "http://id.insee.fr/codes/cog" + REFERENCE_YEAR_GEO + "/";
-	public static String GEO_CONCEPT_SCHEME_URI = COG_BASE_CODE_URI + "departementsOuCommunesOuArrondissementsMunicipaux";
-	public static String GEO_CODE_CONCEPT_URI = COG_BASE_CODE_URI + "DepartementOuCommuneOuArrondissementMunicipal";
-	public static String departementURI(String code) {
-		return COG_BASE_CODE_URI + "departement/" + code;	
-	}
-	public static String communeURI(String code) {
-		return COG_BASE_CODE_URI + "commune/" + code;	
-	}
-	public static String arrondissementMunicipalURI(String code) {
-		return COG_BASE_CODE_URI + "arrondissementMunicipal/" + code;	
-	}
-	public static String cogItemURI(String code) {
-		if (code.length() < 5) return departementURI(code);
-		else if (getParentGeoCode(code) == null) return communeURI(code);
-		return arrondissementMunicipalURI(code);
-	}
-	public static String geoDimensionURI = "http://id.insee.fr/meta/cog" + REFERENCE_YEAR_GEO + "/dimension/DepartementOuCommuneOuArrondissementMunicipal";
-	public static String getParentGeoCode(String code) {
-
-		if (code == null) return null;
-		if (code.startsWith("13") && (!"13055".equals(code))) return "13055";
-		if (code.startsWith("69") && (!"69123".equals(code))) return "69123";
-		if (code.startsWith("75") && (!"75056".equals(code))) return "75056";
-		return null;
-	}
-	
-	public static String getDepFromCommune(String code) {
-		if(code.startsWith("2A") || code.startsWith("2B")) return "20";
-		else if (code.startsWith("97")) return code.substring(0, 3);
-		else return code.substring(0, 2); 
-	}
+//	public static String COG_BASE_CODE_URI = "http://id.insee.fr/codes/cog" + REFERENCE_YEAR_GEO + "/";
+//	public static String GEO_CONCEPT_SCHEME_URI = COG_BASE_CODE_URI + "departementsOuCommunesOuArrondissementsMunicipaux";
+//	public static String GEO_CODE_CONCEPT_URI = COG_BASE_CODE_URI + "DepartementOuCommuneOuArrondissementMunicipal";
+//	public static String departementURI(String code) {
+//		return COG_BASE_CODE_URI + "departement/" + code;	
+//	}
+//	public static String communeURI(String code) {
+//		return COG_BASE_CODE_URI + "commune/" + code;	
+//	}
+//	public static String arrondissementMunicipalURI(String code) {
+//		return COG_BASE_CODE_URI + "arrondissementMunicipal/" + code;	
+//	}
+//	public static String cogItemURI(String code) {
+//		if (code.length() < 5) return departementURI(code);
+//		else if (getParentGeoCode(code) == null) return communeURI(code);
+//		return arrondissementMunicipalURI(code);
+//	}
+//	public static String geoDimensionURI = "http://id.insee.fr/meta/cog" + REFERENCE_YEAR_GEO + "/dimension/DepartementOuCommuneOuArrondissementMunicipal";
+//	public static String getParentGeoCode(String code) {
+//
+//		if (code == null) return null;
+//		if (code.startsWith("13") && (!"13055".equals(code))) return "13055";
+//		if (code.startsWith("69") && (!"69123".equals(code))) return "69123";
+//		if (code.startsWith("75") && (!"75056".equals(code))) return "75056";
+//		return null;
+//	}
+//	
+//	public static String getDepFromCommune(String code) {
+//		if(code.startsWith("2A") || code.startsWith("2B")) return "20";
+//		else if (code.startsWith("97")) return code.substring(0, 3);
+//		else return code.substring(0, 2); 
+//	}
 
 	/** Naming constants and methods for other components */
 	public static String codeItemURI(String conceptCode, String itemCode) {
@@ -158,13 +157,13 @@ public class Configuration {
 		return POP5_BASE_URI + "dataSet/" + dataSetId;	
 	}
 
-	public static String observationURI(String geoCode, String[] dimensionValues) {
-		return POP5_BASE_URI + "observation/" + REFERENCE_YEAR + "-" + geoCode + "-" + String.join("-", dimensionValues);	
-	}
-	
-	public static String observationURI(String params) {
-		return POP5_BASE_URI + "observation/" + REFERENCE_YEAR + "-" + params;	
-	}
+//	public static String observationURI(String geoCode, String[] dimensionValues) {
+//		return POP5_BASE_URI + "observation/" + REFERENCE_YEAR + "-" + geoCode + "-" + String.join("-", dimensionValues);	
+//	}
+//	
+//	public static String observationURI(String params) {
+//		return POP5_BASE_URI + "observation/" + REFERENCE_YEAR + "-" + params;	
+//	}
 	
 	/** Insee geo object base URIs */
 	
