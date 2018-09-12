@@ -26,7 +26,7 @@ public class DataCubeMaker {
 
 	private static final String DATA_CSV = "src/main/resources/data/tourism-nuts-nace-r2-fr.csv";
 
-	private static final String RDF_DIRECTORY_DS = "src/main/resources/rdf/dsd-";
+	private static final String RDF_DIRECTORY_DS = "src/main/resources/rdf/ds-";
 
 	public static void main(String[] args) throws IOException {
 		traiterUneMeasure("occ_arr");
