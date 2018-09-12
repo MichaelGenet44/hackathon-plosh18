@@ -29,13 +29,10 @@
                          qb:dimension  <http://id.insee.fr/meta/dimension/c_resid>
                        ] ;
         qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/nuts>
-                       ] ;
-        qb:component   [ a             qb:ComponentSpecification ;
                          qb:dimension  <http://id.insee.fr/meta/dimension/nace_r2>
                        ] ;
         qb:component   [ a                       qb:ComponentSpecification ;
-                         qb:attribute            <http://id.insee.fr/meta/attribute/unit> ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/conf_status> ;
                          qb:componentAttachment  qb:Observation
                        ] ;
         qb:component   [ a           qb:ComponentSpecification ;
@@ -46,15 +43,18 @@
                                    a       qb:DimensionProperty ]
                        ] ;
         qb:component   [ a                       qb:ComponentSpecification ;
-                         qb:attribute            <http://id.insee.fr/meta/attribute/obs_status> ;
-                         qb:componentAttachment  qb:Observation
-                       ] ;
-        qb:component   [ a                       qb:ComponentSpecification ;
-                         qb:attribute            <http://id.insee.fr/meta/attribute/conf_status> ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/unit> ;
                          qb:componentAttachment  qb:Observation
                        ] ;
         qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/nuts>
+                       ] ;
+        qb:component   [ a             qb:ComponentSpecification ;
                          qb:dimension  <http://id.insee.fr/meta/dimension/partner>
+                       ] ;
+        qb:component   [ a                       qb:ComponentSpecification ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/obs_status> ;
+                         qb:componentAttachment  qb:Observation
                        ] .
 
 <http://id.insee.fr/meta/attribute/obs_status>

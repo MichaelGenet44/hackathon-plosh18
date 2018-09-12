@@ -48,7 +48,7 @@ public class CodelistMaker {
 
 	private static Workbook wb = null;
 
-	private final static String EXCEL_FILE_NAME = "src/main/resources/data/tourism-fr-dsd-1.xls";
+	private final static String EXCEL_FILE_NAME = "src/main/resources/data/tourism-fr-dsd-2.xls";
 
 	private final static String BASE_URI_NUTS = "http://ec.europa.eu/nuts/";
 	private final static String BASE_URI_NACE_R2 = "http://id.insee.fr/codes/nafr2/groupes/";

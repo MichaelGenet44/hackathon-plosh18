@@ -1,9 +1,9 @@
-@prefix att:   <http://id.linked-open-statistics.org/meta/attribute/> .
+@prefix att:   <http://id.insee.fr/meta/attribute/> .
 @prefix qb:    <http://purl.org/linked-data/cube#> .
 @prefix sdmxdim: <http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix dim:   <http://id.linked-open-statistics.org/meta/dimension/> .
-@prefix mes:   <http://id.linked-open-statistics.org/meta/mesure/> .
+@prefix dim:   <http://id.insee.fr/meta/dimension/> .
+@prefix mes:   <http://id.insee.fr/meta/mesure/> .
 
 <http://id.linked-open-statistics.org/observation/22252>
         a                   qb:Observation ;
@@ -741,7 +741,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551> ;
         dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR> ;
-        dim:partner         <http://id.linked-open-statistics.org/codes/partner/OCE> , <http://id.linked-open-statistics.org/codes/partner/AU> ;
+        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AU> , <http://id.linked-open-statistics.org/codes/partner/OCE> ;
         mes:measure         "903540"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-partner-occni> ;
         sdmxdim:timePeriod  "2016"^^xsd:gYear .
@@ -2262,7 +2262,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I552> ;
         dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR> ;
-        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AME_C_S> , <http://id.linked-open-statistics.org/codes/partner/AME_C_S_OTH> ;
+        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AME_C_S_OTH> , <http://id.linked-open-statistics.org/codes/partner/AME_C_S> ;
         mes:measure         "303730"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-partner-occni> ;
         sdmxdim:timePeriod  "2015"^^xsd:gYear .
@@ -2756,7 +2756,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I553> ;
         dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR> ;
-        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AFR> , <http://id.linked-open-statistics.org/codes/partner/AFR_OTH> ;
+        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AFR_OTH> , <http://id.linked-open-statistics.org/codes/partner/AFR> ;
         mes:measure         "16034"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-partner-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -2977,7 +2977,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I552> ;
         dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR> ;
-        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AFR> , <http://id.linked-open-statistics.org/codes/partner/AFR_OTH> ;
+        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AFR_OTH> , <http://id.linked-open-statistics.org/codes/partner/AFR> ;
         mes:measure         "666846"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-partner-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -3380,7 +3380,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551> ;
         dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR> ;
-        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AU> , <http://id.linked-open-statistics.org/codes/partner/OCE> ;
+        dim:partner         <http://id.linked-open-statistics.org/codes/partner/OCE> , <http://id.linked-open-statistics.org/codes/partner/AU> ;
         mes:measure         "1083919"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-partner-occni> ;
         sdmxdim:timePeriod  "2015"^^xsd:gYear .
@@ -4566,7 +4566,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I552> , <http://id.linked-open-statistics.org/codes/nace_r2/I551> , <http://id.linked-open-statistics.org/codes/nace_r2/I553> ;
         dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR> ;
-        dim:partner         <http://id.linked-open-statistics.org/codes/partner/OCE_OTH> , <http://id.linked-open-statistics.org/codes/partner/AME_N_OTH> , <http://id.linked-open-statistics.org/codes/partner/MT> , <http://id.linked-open-statistics.org/codes/partner/KR> , <http://id.linked-open-statistics.org/codes/partner/CY> , <http://id.linked-open-statistics.org/codes/partner/UA> , <http://id.linked-open-statistics.org/codes/partner/WRL_NAL> , <http://id.linked-open-statistics.org/codes/partner/FR> , <http://id.linked-open-statistics.org/codes/partner/AU> , <http://id.linked-open-statistics.org/codes/partner/OCE> , <http://id.linked-open-statistics.org/codes/partner/ZA> , <http://id.linked-open-statistics.org/codes/partner/BR> ;
+        dim:partner         <http://id.linked-open-statistics.org/codes/partner/ZA> , <http://id.linked-open-statistics.org/codes/partner/BR> , <http://id.linked-open-statistics.org/codes/partner/CY> , <http://id.linked-open-statistics.org/codes/partner/AU> , <http://id.linked-open-statistics.org/codes/partner/MT> , <http://id.linked-open-statistics.org/codes/partner/OCE> , <http://id.linked-open-statistics.org/codes/partner/KR> , <http://id.linked-open-statistics.org/codes/partner/AME_N_OTH> , <http://id.linked-open-statistics.org/codes/partner/OCE_OTH> , <http://id.linked-open-statistics.org/codes/partner/WRL_NAL> , <http://id.linked-open-statistics.org/codes/partner/UA> , <http://id.linked-open-statistics.org/codes/partner/FR> ;
         mes:measure         "0"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-partner-occni> ;
         sdmxdim:timePeriod  "2016"^^xsd:gYear , "2015"^^xsd:gYear , "2017"^^xsd:gYear .
@@ -4605,7 +4605,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I553> ;
         dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR> ;
-        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AME_C_S> , <http://id.linked-open-statistics.org/codes/partner/AME_C_S_OTH> ;
+        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AME_C_S_OTH> , <http://id.linked-open-statistics.org/codes/partner/AME_C_S> ;
         mes:measure         "7113"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-partner-occni> ;
         sdmxdim:timePeriod  "2016"^^xsd:gYear .
@@ -5047,7 +5047,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I553> ;
         dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR> ;
-        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AFR_OTH> , <http://id.linked-open-statistics.org/codes/partner/AFR> ;
+        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AFR> , <http://id.linked-open-statistics.org/codes/partner/AFR_OTH> ;
         mes:measure         "6921"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-partner-occni> ;
         sdmxdim:timePeriod  "2016"^^xsd:gYear .
@@ -5671,7 +5671,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551> ;
         dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR> ;
-        dim:partner         <http://id.linked-open-statistics.org/codes/partner/AU> , <http://id.linked-open-statistics.org/codes/partner/OCE> ;
+        dim:partner         <http://id.linked-open-statistics.org/codes/partner/OCE> , <http://id.linked-open-statistics.org/codes/partner/AU> ;
         mes:measure         "918098"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-partner-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .

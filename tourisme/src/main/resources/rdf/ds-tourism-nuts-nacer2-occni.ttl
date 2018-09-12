@@ -3887,13 +3887,8 @@
         att:obs_status      <http://id.linked-open-statistics.org/codes/obs_status/A> ;
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> , <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
-<<<<<<< HEAD
-        dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I552> , <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> , <http://id.linked-open-statistics.org/codes/nace_r2/I553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRA4> , <http://id.linked-open-statistics.org/codes/nuts/FRY2> , <http://id.linked-open-statistics.org/codes/nuts/FRY4> , <http://id.linked-open-statistics.org/codes/nuts/FRA2> , <http://id.linked-open-statistics.org/codes/nuts/FRA> , <http://id.linked-open-statistics.org/codes/nuts/FRY1> , <http://id.linked-open-statistics.org/codes/nuts/FRA1> , <http://id.linked-open-statistics.org/codes/nuts/FRA5> , <http://id.linked-open-statistics.org/codes/nuts/FRY5> , <http://id.linked-open-statistics.org/codes/nuts/FRY3> , <http://id.linked-open-statistics.org/codes/nuts/FRY> , <http://id.linked-open-statistics.org/codes/nuts/FRA3> ;
-=======
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> , <http://id.linked-open-statistics.org/codes/nace_r2/I552> , <http://id.linked-open-statistics.org/codes/nace_r2/I553> ;
         dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRA> , <http://id.linked-open-statistics.org/codes/nuts/FRY3> , <http://id.linked-open-statistics.org/codes/nuts/FRY> , <http://id.linked-open-statistics.org/codes/nuts/FRA2> , <http://id.linked-open-statistics.org/codes/nuts/FRY2> , <http://id.linked-open-statistics.org/codes/nuts/FRA3> , <http://id.linked-open-statistics.org/codes/nuts/FRY1> , <http://id.linked-open-statistics.org/codes/nuts/FRY4> , <http://id.linked-open-statistics.org/codes/nuts/FRY5> , <http://id.linked-open-statistics.org/codes/nuts/FRA4> , <http://id.linked-open-statistics.org/codes/nuts/FRA1> , <http://id.linked-open-statistics.org/codes/nuts/FRA5> ;
->>>>>>> ed7622361dcb91d0eaeef56b13221bfa35a9ac28
         mes:measure         "0"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-nuts-nacer2-occni> ;
         sdmxdim:timePeriod  "2016"^^xsd:gYear , "2015"^^xsd:gYear , "2017"^^xsd:gYear .

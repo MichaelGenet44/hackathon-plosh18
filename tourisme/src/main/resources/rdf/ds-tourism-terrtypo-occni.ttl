@@ -1,9 +1,9 @@
-@prefix att:   <http://id.linked-open-statistics.org/meta/attribute/> .
+@prefix att:   <http://id.insee.fr/meta/attribute/> .
 @prefix qb:    <http://purl.org/linked-data/cube#> .
 @prefix sdmxdim: <http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix dim:   <http://id.linked-open-statistics.org/meta/dimension/> .
-@prefix mes:   <http://id.linked-open-statistics.org/meta/mesure/> .
+@prefix dim:   <http://id.insee.fr/meta/dimension/> .
+@prefix mes:   <http://id.insee.fr/meta/mesure/> .
 
 <http://id.linked-open-statistics.org/observation/1946482>
         a                   qb:Observation ;
@@ -129,7 +129,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRM> , <http://id.linked-open-statistics.org/codes/nuts/FRM0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRM0> , <http://id.linked-open-statistics.org/codes/nuts/FRM> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/CST_A> ;
         mes:measure         "3114790"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -688,7 +688,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG> , <http://id.linked-open-statistics.org/codes/nuts/FRG0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG0> , <http://id.linked-open-statistics.org/codes/nuts/FRG> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/CST_A> ;
         mes:measure         "12081703"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -948,7 +948,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH> , <http://id.linked-open-statistics.org/codes/nuts/FRH0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH0> , <http://id.linked-open-statistics.org/codes/nuts/FRH> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/NCST_A> ;
         mes:measure         "669425"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -1078,7 +1078,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH> , <http://id.linked-open-statistics.org/codes/nuts/FRH0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH0> , <http://id.linked-open-statistics.org/codes/nuts/FRH> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/CST_A> ;
         mes:measure         "16318173"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -1091,7 +1091,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL> , <http://id.linked-open-statistics.org/codes/nuts/FRL0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL0> , <http://id.linked-open-statistics.org/codes/nuts/FRL> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/NCST_A> ;
         mes:measure         "6205426"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -1221,7 +1221,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FR10> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FR1> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/NCST_A> ;
         mes:measure         "38267721"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -1247,7 +1247,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG0> , <http://id.linked-open-statistics.org/codes/nuts/FRG> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG> , <http://id.linked-open-statistics.org/codes/nuts/FRG0> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/NCST_A> ;
         mes:measure         "1690318"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -1273,7 +1273,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR30> , <http://id.linked-open-statistics.org/codes/nuts/FR3> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR3> , <http://id.linked-open-statistics.org/codes/nuts/FR30> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/NCST_A> ;
         mes:measure         "1290027"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -1666,7 +1666,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR30> , <http://id.linked-open-statistics.org/codes/nuts/FR3> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR3> , <http://id.linked-open-statistics.org/codes/nuts/FR30> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/CST_A> ;
         mes:measure         "1015851"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -1965,7 +1965,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL0> , <http://id.linked-open-statistics.org/codes/nuts/FRL> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL> , <http://id.linked-open-statistics.org/codes/nuts/FRL0> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/NCST_A> ;
         mes:measure         "14681067"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -2394,7 +2394,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRB> , <http://id.linked-open-statistics.org/codes/nuts/FRB0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRB0> , <http://id.linked-open-statistics.org/codes/nuts/FRB> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/NCST_A> ;
         mes:measure         "7531425"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -3252,7 +3252,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRJ1> , <http://id.linked-open-statistics.org/codes/nuts/FRJ> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRJ> , <http://id.linked-open-statistics.org/codes/nuts/FRJ1> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/CST_A> ;
         mes:measure         "5454188"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -3395,7 +3395,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL> , <http://id.linked-open-statistics.org/codes/nuts/FRL0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL0> , <http://id.linked-open-statistics.org/codes/nuts/FRL> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/CST_A> ;
         mes:measure         "22443895"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -3603,7 +3603,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRM> , <http://id.linked-open-statistics.org/codes/nuts/FRM0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRM0> , <http://id.linked-open-statistics.org/codes/nuts/FRM> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/NCST_A> ;
         mes:measure         "125255"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -3616,7 +3616,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> , <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRK2> , <http://id.linked-open-statistics.org/codes/nuts/FR26> , <http://id.linked-open-statistics.org/codes/nuts/FR63> , <http://id.linked-open-statistics.org/codes/nuts/FRF3> , <http://id.linked-open-statistics.org/codes/nuts/FR42> , <http://id.linked-open-statistics.org/codes/nuts/FRC2> , <http://id.linked-open-statistics.org/codes/nuts/FRA2> , <http://id.linked-open-statistics.org/codes/nuts/FRF> , <http://id.linked-open-statistics.org/codes/nuts/FRK1> , <http://id.linked-open-statistics.org/codes/nuts/FRC> , <http://id.linked-open-statistics.org/codes/nuts/FR4> , <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FRA5> , <http://id.linked-open-statistics.org/codes/nuts/FRY2> , <http://id.linked-open-statistics.org/codes/nuts/FRI2> , <http://id.linked-open-statistics.org/codes/nuts/FR72> , <http://id.linked-open-statistics.org/codes/nuts/FR21> , <http://id.linked-open-statistics.org/codes/nuts/FR62> , <http://id.linked-open-statistics.org/codes/nuts/FR24> , <http://id.linked-open-statistics.org/codes/nuts/FRF2> , <http://id.linked-open-statistics.org/codes/nuts/FR7> , <http://id.linked-open-statistics.org/codes/nuts/FR71> , <http://id.linked-open-statistics.org/codes/nuts/FR41> , <http://id.linked-open-statistics.org/codes/nuts/FRC1> , <http://id.linked-open-statistics.org/codes/nuts/FRA1> , <http://id.linked-open-statistics.org/codes/nuts/FRY5> , <http://id.linked-open-statistics.org/codes/nuts/FRB> , <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FRY1> , <http://id.linked-open-statistics.org/codes/nuts/FRK> , <http://id.linked-open-statistics.org/codes/nuts/FRB0> , <http://id.linked-open-statistics.org/codes/nuts/FR43> , <http://id.linked-open-statistics.org/codes/nuts/FRF1> , <http://id.linked-open-statistics.org/codes/nuts/FRJ2> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRC> , <http://id.linked-open-statistics.org/codes/nuts/FRB0> , <http://id.linked-open-statistics.org/codes/nuts/FRY1> , <http://id.linked-open-statistics.org/codes/nuts/FRI2> , <http://id.linked-open-statistics.org/codes/nuts/FRF2> , <http://id.linked-open-statistics.org/codes/nuts/FRJ2> , <http://id.linked-open-statistics.org/codes/nuts/FRY2> , <http://id.linked-open-statistics.org/codes/nuts/FR63> , <http://id.linked-open-statistics.org/codes/nuts/FRF3> , <http://id.linked-open-statistics.org/codes/nuts/FR7> , <http://id.linked-open-statistics.org/codes/nuts/FR62> , <http://id.linked-open-statistics.org/codes/nuts/FRK> , <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FR4> , <http://id.linked-open-statistics.org/codes/nuts/FRK1> , <http://id.linked-open-statistics.org/codes/nuts/FRF> , <http://id.linked-open-statistics.org/codes/nuts/FRC1> , <http://id.linked-open-statistics.org/codes/nuts/FR42> , <http://id.linked-open-statistics.org/codes/nuts/FR71> , <http://id.linked-open-statistics.org/codes/nuts/FR24> , <http://id.linked-open-statistics.org/codes/nuts/FR21> , <http://id.linked-open-statistics.org/codes/nuts/FRF1> , <http://id.linked-open-statistics.org/codes/nuts/FR72> , <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FRB> , <http://id.linked-open-statistics.org/codes/nuts/FRY5> , <http://id.linked-open-statistics.org/codes/nuts/FR41> , <http://id.linked-open-statistics.org/codes/nuts/FRK2> , <http://id.linked-open-statistics.org/codes/nuts/FRA2> , <http://id.linked-open-statistics.org/codes/nuts/FRC2> , <http://id.linked-open-statistics.org/codes/nuts/FR43> , <http://id.linked-open-statistics.org/codes/nuts/FRA1> , <http://id.linked-open-statistics.org/codes/nuts/FRA5> , <http://id.linked-open-statistics.org/codes/nuts/FR26> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/CST_A> , <http://id.linked-open-statistics.org/codes/terrtypo/NCST_A> ;
         mes:measure         "0"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -3707,7 +3707,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH> , <http://id.linked-open-statistics.org/codes/nuts/FRH0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH0> , <http://id.linked-open-statistics.org/codes/nuts/FRH> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/NCST_A> ;
         mes:measure         "2776259"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -3980,7 +3980,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL> , <http://id.linked-open-statistics.org/codes/nuts/FRL0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL0> , <http://id.linked-open-statistics.org/codes/nuts/FRL> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/CST_A> ;
         mes:measure         "11679566"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;
@@ -4045,7 +4045,7 @@
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR3> , <http://id.linked-open-statistics.org/codes/nuts/FR30> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR30> , <http://id.linked-open-statistics.org/codes/nuts/FR3> ;
         dim:terrtypo        <http://id.linked-open-statistics.org/codes/terrtypo/CST_A> ;
         mes:measure         "1988054"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-terrtypo-occni> ;

@@ -1,9 +1,9 @@
-@prefix att:   <http://id.linked-open-statistics.org/meta/attribute/> .
+@prefix att:   <http://id.insee.fr/meta/attribute/> .
 @prefix qb:    <http://purl.org/linked-data/cube#> .
 @prefix sdmxdim: <http://purl.org/linked-data/sdmx/2009/dimension#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix dim:   <http://id.linked-open-statistics.org/meta/dimension/> .
-@prefix mes:   <http://id.linked-open-statistics.org/meta/mesure/> .
+@prefix dim:   <http://id.insee.fr/meta/dimension/> .
+@prefix mes:   <http://id.insee.fr/meta/mesure/> .
 
 <http://id.linked-open-statistics.org/observation/10065934>
         a                   qb:Observation ;
@@ -351,7 +351,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG2> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL> , <http://id.linked-open-statistics.org/codes/nuts/FRL0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL0> , <http://id.linked-open-statistics.org/codes/nuts/FRL> ;
         mes:measure         "5149266"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -364,7 +364,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG3> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FR1> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FR10> ;
         mes:measure         "2108090"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -819,7 +819,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FR10> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FR1> ;
         mes:measure         "34380641"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2015"^^xsd:gYear .
@@ -975,7 +975,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG2> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FR1> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FR10> ;
         mes:measure         "5286142"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2016"^^xsd:gYear .
@@ -1209,7 +1209,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG2> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG0> , <http://id.linked-open-statistics.org/codes/nuts/FRG> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG> , <http://id.linked-open-statistics.org/codes/nuts/FRG0> ;
         mes:measure         "5854907"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -1716,7 +1716,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH0> , <http://id.linked-open-statistics.org/codes/nuts/FRH> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH> , <http://id.linked-open-statistics.org/codes/nuts/FRH0> ;
         mes:measure         "4575376"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -2210,7 +2210,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG3> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH> , <http://id.linked-open-statistics.org/codes/nuts/FRH0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH0> , <http://id.linked-open-statistics.org/codes/nuts/FRH> ;
         mes:measure         "2355274"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -2392,7 +2392,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG2> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR30> , <http://id.linked-open-statistics.org/codes/nuts/FR3> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR3> , <http://id.linked-open-statistics.org/codes/nuts/FR30> ;
         mes:measure         "291396"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2015"^^xsd:gYear .
@@ -3201,7 +3201,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG2> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FR10> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FR1> ;
         mes:measure         "6109434"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -3279,7 +3279,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG2> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR3> , <http://id.linked-open-statistics.org/codes/nuts/FR30> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR30> , <http://id.linked-open-statistics.org/codes/nuts/FR3> ;
         mes:measure         "932663"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2015"^^xsd:gYear .
@@ -3435,7 +3435,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG0> , <http://id.linked-open-statistics.org/codes/nuts/FRG> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG> , <http://id.linked-open-statistics.org/codes/nuts/FRG0> ;
         mes:measure         "4861800"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -3578,7 +3578,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FR10> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FR1> ;
         mes:measure         "25566513"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2016"^^xsd:gYear .
@@ -3836,9 +3836,9 @@
         att:obs_status      <http://id.linked-open-statistics.org/codes/obs_status/A> ;
         att:unit            <http://id.linked-open-statistics.org/codes/unit/NR> ;
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> , <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
-        dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG2> , <http://id.linked-open-statistics.org/codes/degurba/DEG3> , <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
+        dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG3> , <http://id.linked-open-statistics.org/codes/degurba/DEG2> , <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRY1> , <http://id.linked-open-statistics.org/codes/nuts/FRA1> , <http://id.linked-open-statistics.org/codes/nuts/FRA5> , <http://id.linked-open-statistics.org/codes/nuts/FRY5> , <http://id.linked-open-statistics.org/codes/nuts/FRY3> , <http://id.linked-open-statistics.org/codes/nuts/FRA3> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRY3> , <http://id.linked-open-statistics.org/codes/nuts/FRA3> , <http://id.linked-open-statistics.org/codes/nuts/FRY1> , <http://id.linked-open-statistics.org/codes/nuts/FRY5> , <http://id.linked-open-statistics.org/codes/nuts/FRA1> , <http://id.linked-open-statistics.org/codes/nuts/FRA5> ;
         mes:measure         "0"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2016"^^xsd:gYear , "2015"^^xsd:gYear , "2017"^^xsd:gYear .
@@ -3877,7 +3877,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG3> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL0> , <http://id.linked-open-statistics.org/codes/nuts/FRL> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL> , <http://id.linked-open-statistics.org/codes/nuts/FRL0> ;
         mes:measure         "10410239"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -3929,7 +3929,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG0> , <http://id.linked-open-statistics.org/codes/nuts/FRG> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG> , <http://id.linked-open-statistics.org/codes/nuts/FRG0> ;
         mes:measure         "700723"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -4241,7 +4241,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG2> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRM0> , <http://id.linked-open-statistics.org/codes/nuts/FRM> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRM> , <http://id.linked-open-statistics.org/codes/nuts/FRM0> ;
         mes:measure         "1199869"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -4267,7 +4267,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH> , <http://id.linked-open-statistics.org/codes/nuts/FRH0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH0> , <http://id.linked-open-statistics.org/codes/nuts/FRH> ;
         mes:measure         "749021"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -4371,7 +4371,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG3> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR30> , <http://id.linked-open-statistics.org/codes/nuts/FR3> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR3> , <http://id.linked-open-statistics.org/codes/nuts/FR30> ;
         mes:measure         "483098"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2015"^^xsd:gYear .
@@ -4475,7 +4475,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG2> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH0> , <http://id.linked-open-statistics.org/codes/nuts/FRH> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH> , <http://id.linked-open-statistics.org/codes/nuts/FRH0> ;
         mes:measure         "4229821"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -5658,7 +5658,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG3> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH0> , <http://id.linked-open-statistics.org/codes/nuts/FRH> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRH> , <http://id.linked-open-statistics.org/codes/nuts/FRH0> ;
         mes:measure         "10289235"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -5710,7 +5710,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR30> , <http://id.linked-open-statistics.org/codes/nuts/FR3> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR3> , <http://id.linked-open-statistics.org/codes/nuts/FR30> ;
         mes:measure         "4042461"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2015"^^xsd:gYear .
@@ -5788,7 +5788,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG3> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FR10> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FR1> ;
         mes:measure         "2064668"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2016"^^xsd:gYear .
@@ -5931,7 +5931,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG3> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FR1> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FR10> ;
         mes:measure         "2089169"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2015"^^xsd:gYear .
@@ -6269,7 +6269,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL> , <http://id.linked-open-statistics.org/codes/nuts/FRL0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRL0> , <http://id.linked-open-statistics.org/codes/nuts/FRL> ;
         mes:measure         "16795865"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -7257,7 +7257,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG3> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG> , <http://id.linked-open-statistics.org/codes/nuts/FRG0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRG0> , <http://id.linked-open-statistics.org/codes/nuts/FRG> ;
         mes:measure         "8991585"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -7309,7 +7309,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRB> , <http://id.linked-open-statistics.org/codes/nuts/FRB0> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRB0> , <http://id.linked-open-statistics.org/codes/nuts/FRB> ;
         mes:measure         "828589"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -7582,7 +7582,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/FOR> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG2> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR30> , <http://id.linked-open-statistics.org/codes/nuts/FR3> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR3> , <http://id.linked-open-statistics.org/codes/nuts/FR30> ;
         mes:measure         "312552"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2016"^^xsd:gYear .
@@ -7621,7 +7621,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG1> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRM0> , <http://id.linked-open-statistics.org/codes/nuts/FRM> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FRM> , <http://id.linked-open-statistics.org/codes/nuts/FRM0> ;
         mes:measure         "565030"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .
@@ -8076,7 +8076,7 @@
         dim:c_resid         <http://id.linked-open-statistics.org/codes/c_resid/NAT> ;
         dim:degurba         <http://id.linked-open-statistics.org/codes/degurba/DEG3> ;
         dim:nace_r2         <http://id.linked-open-statistics.org/codes/nace_r2/I551TOI553> ;
-        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR1> , <http://id.linked-open-statistics.org/codes/nuts/FR10> ;
+        dim:nuts            <http://id.linked-open-statistics.org/codes/nuts/FR10> , <http://id.linked-open-statistics.org/codes/nuts/FR1> ;
         mes:measure         "2487166"^^xsd:int ;
         qb:dataSet          <http://id.linked-open-statistics.org/dataSet/tourism-degurba-occni> ;
         sdmxdim:timePeriod  "2017"^^xsd:gYear .

@@ -6,7 +6,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -22,13 +21,13 @@ public class ZipMaker {
 		zip("nuts-nacer2", "occarr");
 		zip("nuts-nacer2", "occni");
 
-		zip("degurba", "occarr");
+		//zip("degurba", "occarr");
 		zip("degurba", "occni");
 
 		zip("partner", "occarr");
 		zip("partner", "occni");
 
-		zip("terrtypo", "occarr");
+		//zip("terrtypo", "occarr");
 		zip("terrtypo", "occni");
 	}
 
