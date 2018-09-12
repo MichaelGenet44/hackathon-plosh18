@@ -105,8 +105,16 @@ public class DSDModelMakerOccni {
 	public static void main(String[] args) throws Exception {
 		wb = new HSSFWorkbook(new FileInputStream(TOURISM_METADATA_FILE_NAME));
 
-		Model tourismeNutsNacer2 = getTourismeNutsNacer2Model();
-		RDFDataMgr.write(new FileOutputStream("src/main/resources/rdf/dsd-tourism-nuts-nacer2-occni.ttl"), tourismeNutsNacer2, Lang.TURTLE);
+//		String dsdName = "nuts-nacer2-occni";
+//		String sheetName = "DSD-tourism_nuts_nace_r2";
+//		String dsdName = "degurba-occni";
+//		String sheetName = "DSD-tourism-degurba";
+//		String dsdName = "terrtypo-occni";
+//		String sheetName = "DSD-tourism-terrtypo";
+		String dsdName = "partner-occni";
+		String sheetName = "DSD-tourism-partner";
+		Model tourismeNutsNacer2 = getTourismeNutsNacer2Model(sheetName,dsdName);
+		RDFDataMgr.write(new FileOutputStream("src/main/resources/rdf/dsd-tourism-"+dsdName+".ttl"), tourismeNutsNacer2, Lang.TURTLE);
 	}
 
 	
@@ -117,18 +125,18 @@ public class DSDModelMakerOccni {
 	 * 
 	 * @return The Data Cube data structure definition as a Jena model.
 	 */
-	public static Model getTourismeNutsNacer2Model() { // TODO Distinguish COM and/or ARM ?
+	public static Model getTourismeNutsNacer2Model(String sheetName,String dsdName) { // TODO Distinguish COM and/or ARM ?
 		Model tourismeNutsNacer2Model = ModelFactory.createDefaultModel();
 		tourismeNutsNacer2Model.setNsPrefixes(DSD_PREFIXES);
 
 		// Creation of the DSD
-		Resource tourisme = tourismeNutsNacer2Model.createResource(dsdURI("nuts-nacer2-occni"), DataCubeOntology.DataStructureDefinition);
+		Resource tourisme = tourismeNutsNacer2Model.createResource(dsdURI(dsdName), DataCubeOntology.DataStructureDefinition);
 		tourisme.addProperty(RDFS.label, tourismeNutsNacer2Model.createLiteral("Tourism industries  -  Annual occupancy of tourist accommodation establishments - Nights spent by residents and non-residents", "en"));
 		tourisme.addProperty(DC.description, tourismeNutsNacer2Model.createLiteral("Nights by NUTS, NACE_R2 and Country of residence", "en"));
-		tourisme.addProperty(DCTerms.identifier, tourismeNutsNacer2Model.createLiteral("DSD-TOURISM-NUTS-NACER2-OCCNI", "fr"));
+		tourisme.addProperty(DCTerms.identifier, tourismeNutsNacer2Model.createLiteral("DSD-TOURISM-"+dsdName.toUpperCase(), "fr"));
 		logger.info("Creating DSD " + tourisme.getURI());
 
-		Sheet feuilleDSD = wb.getSheet("DSD-tourism_nuts_nace_r2");
+		Sheet feuilleDSD = wb.getSheet(sheetName);
 		Iterator<Row> rowIterator = feuilleDSD.rowIterator();
 		rowIterator.next();
 		rowIterator.next();
