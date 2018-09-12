@@ -1,0 +1,12 @@
+2018-09-12 10:11:55 - 3541 [main] INFO  DSDModelMakerOccni 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occni
+2018-09-12 10:11:59 - 3448 [main] INFO  DSDModelMakerOccarr 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occarr
+2018-09-12 10:16:18 - 3646 [main] INFO  DSDModelMakerOccni 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occni
+2018-09-12 10:16:54 - 3603 [main] INFO  DSDModelMakerOccarr 	 Creating DSD http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/nuts-nacer2-occarr
+2018-09-12 10:17:06 - 3417 [main] INFO  CodelistMaker 	 import code list normal (feuille C_RESID - nb cell 2)
+2018-09-12 10:17:06 - 3432 [main] INFO  CodelistMaker 	 import code list normal (feuille DEGURBA - nb cell 2)
+2018-09-12 10:17:06 - 3432 [main] INFO  CodelistMaker 	 import code list normal (feuille TERRTYPO - nb cell 2)
+2018-09-12 10:17:06 - 3432 [main] INFO  CodelistMaker 	 import code list normal (feuille OBS_STATUS - nb cell 2)
+2018-09-12 10:17:06 - 3464 [main] INFO  CodelistMaker 	 import code list normal (feuille CONF_STATUS - nb cell 2)
+2018-09-12 10:17:06 - 3464 [main] INFO  CodelistMaker 	 import code list normal (feuille UNIT - nb cell 2)
+2018-09-12 10:17:06 - 3464 [main] INFO  CodelistMaker 	 import code list normal (feuille UNIT_MULT - nb cell 2)
+2018-09-12 10:17:06 - 3480 [main] INFO  CodelistMaker 	 importNuts

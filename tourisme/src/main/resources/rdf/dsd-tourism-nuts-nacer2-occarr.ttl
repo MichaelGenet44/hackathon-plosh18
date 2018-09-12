@@ -66,8 +66,16 @@
         <http://purl.org/dc/elements/1.1/description>
                 "Nights by NUTS, NACE_R2 and Country of residence"@en ;
         dc:identifier  "DSD-TOURISM-NUTS-NACER2-OCCARR"@fr ;
-        qb:component   [ a           qb:ComponentSpecification ;
-                         qb:measure  <http://id.insee.fr/meta/mesure/tourism_occarr>
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/nuts>
+                       ] ;
+        qb:component   [ a                       qb:ComponentSpecification ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/unit> ;
+                         qb:componentAttachment  qb:Observation
+                       ] ;
+        qb:component   [ a                       qb:ComponentSpecification ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/obs_status> ;
+                         qb:componentAttachment  qb:Observation
                        ] ;
         qb:component   [ a                       qb:ComponentSpecification ;
                          qb:attribute            <http://id.insee.fr/meta/attribute/conf_status> ;
@@ -77,22 +85,14 @@
                          qb:dimension  [ a  "http://purl.org/linked-data/sdmx/2009/dimension#timePeriod" ;
                                    a       qb:DimensionProperty ]
                        ] ;
-        qb:component   [ a                       qb:ComponentSpecification ;
-                         qb:attribute            <http://id.insee.fr/meta/attribute/unit> ;
-                         qb:componentAttachment  qb:Observation
-                       ] ;
         qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/nuts>
+                         qb:dimension  <http://id.insee.fr/meta/dimension/c_resid>
                        ] ;
-        qb:component   [ a                       qb:ComponentSpecification ;
-                         qb:attribute            <http://id.insee.fr/meta/attribute/obs_status> ;
-                         qb:componentAttachment  qb:Observation
+        qb:component   [ a           qb:ComponentSpecification ;
+                         qb:measure  <http://id.insee.fr/meta/mesure/tourism_occarr>
                        ] ;
         qb:component   [ a             qb:ComponentSpecification ;
                          qb:dimension  <http://id.insee.fr/meta/dimension/nace_r2>
-                       ] ;
-        qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/c_resid>
                        ] .
 
 <http://id.insee.fr/meta/dimension/nuts>

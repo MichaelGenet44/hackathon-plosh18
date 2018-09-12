@@ -53,9 +53,9 @@ public class DataCubeMaker {
 			tourismDepModel.setNsPrefix("xsd", XSD.getURI());
 			tourismDepModel.setNsPrefix("qb", DataCubeOntology.getURI());
 
-			tourismDepModel.setNsPrefix("dim", "http://id.linked-open-statistics.org/meta/dimension/");
-			tourismDepModel.setNsPrefix("mes", "http://id.linked-open-statistics.org/meta/mesure/");
-			tourismDepModel.setNsPrefix("att", "http://id.linked-open-statistics.org/meta/attribute/");
+			tourismDepModel.setNsPrefix("dim", "http://id.insee.fr/meta/dimension/");
+			tourismDepModel.setNsPrefix("mes", "http://id.insee.fr/meta/mesure/");
+			tourismDepModel.setNsPrefix("att", "http://id.insee.fr/meta/attribute/");
 			tourismDepModel.setNsPrefix("sdmxdim", "http://purl.org/linked-data/sdmx/2009/dimension#");
 
 			String dataSetName = typeDsd + "-" + StringUtils.remove(measure, "_");

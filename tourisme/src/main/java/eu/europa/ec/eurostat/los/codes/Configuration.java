@@ -7,7 +7,7 @@ public class Configuration {
 	public final static String CONCEPTS_BASE_URI = BASE_URI + "concepts/";
 
 	public static String componentURI(String componentType, String conceptCode) { // Type should be 'attribute', 'dimension' or 'measure' but no control is made
-		return  BASE_URI + "meta/" + componentType + "/" + conceptCode.toLowerCase();
+		return  "http://id.insee.fr/meta/" + componentType + "/" + conceptCode.toLowerCase();
 	}
 	
 	/** Naming constants and methods for other components */

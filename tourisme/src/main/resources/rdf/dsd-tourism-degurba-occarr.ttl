@@ -72,14 +72,6 @@
         a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
         rdfs:label  "degurba"@fr .
 
-<http://id.insee.fr/meta/dimension/nuts>
-        a              qb:CodedProperty , qb:DimensionProperty ;
-        rdfs:label     "nuts"@fr ;
-        rdfs:range     <http://id.linked-open-statistics.org/concepts/Nuts> ;
-        dc:identifier  "NUTS"@fr ;
-        qb:codeList    <http://id.linked-open-statistics.org/codes/nuts> ;
-        qb:concept     <http://id.insee.fr/concepts/2112> .
-
 <http://id.insee.fr/meta/attribute/unit>
         a              qb:CodedProperty , qb:AttributeProperty ;
         rdfs:label     "unit"@fr ;
@@ -87,6 +79,14 @@
         dc:identifier  "UNIT"@fr ;
         qb:codeList    <http://id.linked-open-statistics.org/codes/unit> ;
         qb:concept     <http://id.linked-open-statistics.org/concepts/UNIT> .
+
+<http://id.insee.fr/meta/dimension/nuts>
+        a              qb:CodedProperty , qb:DimensionProperty ;
+        rdfs:label     "nuts"@fr ;
+        rdfs:range     <http://id.linked-open-statistics.org/concepts/Nuts> ;
+        dc:identifier  "NUTS"@fr ;
+        qb:codeList    <http://id.linked-open-statistics.org/codes/nuts> ;
+        qb:concept     <http://id.insee.fr/concepts/2112> .
 
 <http://id.linked-open-statistics.org/plosh/temp5/meta/demo/tourism/dsd/degurba-occarr>
         a              qb:DataStructureDefinition ;
@@ -98,12 +98,8 @@
                          qb:dimension  [ a  "http://purl.org/linked-data/sdmx/2009/dimension#timePeriod" ;
                                    a       qb:DimensionProperty ]
                        ] ;
-        qb:component   [ a           qb:ComponentSpecification ;
-                         qb:measure  <http://id.insee.fr/meta/mesure/tourism_occarr>
-                       ] ;
-        qb:component   [ a                       qb:ComponentSpecification ;
-                         qb:attribute            <http://id.insee.fr/meta/attribute/unit> ;
-                         qb:componentAttachment  qb:Observation
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/nace_r2>
                        ] ;
         qb:component   [ a                       qb:ComponentSpecification ;
                          qb:attribute            <http://id.insee.fr/meta/attribute/conf_status> ;
@@ -113,14 +109,18 @@
                          qb:dimension  <http://id.insee.fr/meta/dimension/c_resid>
                        ] ;
         qb:component   [ a                       qb:ComponentSpecification ;
-                         qb:attribute            <http://id.insee.fr/meta/attribute/obs_status> ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/unit> ;
                          qb:componentAttachment  qb:Observation
                        ] ;
         qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/nace_r2>
-                       ] ;
-        qb:component   [ a             qb:ComponentSpecification ;
                          qb:dimension  <http://id.insee.fr/meta/dimension/nuts>
+                       ] ;
+        qb:component   [ a           qb:ComponentSpecification ;
+                         qb:measure  <http://id.insee.fr/meta/mesure/tourism_occarr>
+                       ] ;
+        qb:component   [ a                       qb:ComponentSpecification ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/obs_status> ;
+                         qb:componentAttachment  qb:Observation
                        ] ;
         qb:component   [ a             qb:ComponentSpecification ;
                          qb:dimension  <http://id.insee.fr/meta/dimension/degurba>
