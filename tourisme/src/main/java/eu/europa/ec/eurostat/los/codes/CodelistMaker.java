@@ -7,8 +7,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.text.Normalizer;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
@@ -36,7 +38,11 @@ public class CodelistMaker {
 	private static Logger logger = LogManager.getLogger(CodelistMaker.class);
 	private static final String NUTS = "nuts";
 
-	private static final String NUTS_CSV = "src/main/resources/data/tourism-nuts-nace-r2-fr.csv";
+	private static final String[] NUTS_CSV = { "src/main/resources/data/tourism-nuts-nace-r2-fr.csv",
+												"src/main/resources/data/tourism-degurba-fr.csv",
+												"src/main/resources/data/tourism-partner-fr.csv",
+												"src/main/resources/data/tourism-terrtypo-fr.csv"
+											};
 
 	private static final String RDF_DIRECTORY = "src/main/resources/rdf/cl-";
 
@@ -79,7 +85,7 @@ public class CodelistMaker {
 		Sheet sheet = wb.getSheet("NACE_R2");
 		String clTag = "nace_r2";
 		Model codelistModel = createMultipleLevelsConceptScheme(clTag, sheet, 2);
-		// Compléments
+		// Complï¿½ments
 		codelistModel.setNsPrefix("foaf", FOAF.getURI());
 		for (ResIterator iterator = codelistModel.listResourcesWithProperty(SKOS.broader); iterator.hasNext();) {
 			Resource item = iterator.next();
@@ -93,22 +99,28 @@ public class CodelistMaker {
 
 	private static void importNuts() throws FileNotFoundException {
 		logger.info("importNuts");
-		try (FileReader fileReader = new FileReader(NUTS_CSV)) {
-			CSVReader csvReader = new CSVReader(fileReader);
-			List<String> nuts = csvReader.readAll().stream().skip(1).map(line -> line[2]).collect(Collectors.toList());
-			csvReader.close();
-
-			// String nutsValues = new
-			// CSVReaderHeaderAware(fileReader).readMap().get("NUTS");
-			Model codelistModel = createNutsConceptScheme(nuts);
-			RDFDataMgr.write(new FileOutputStream(RDF_DIRECTORY + "nuts.ttl"), codelistModel, Lang.TURTLE);
-		} catch (IOException e) {
-			logger.error(e);
+		Set<String> nuts = new HashSet<>();
+		for (String nutFilename : NUTS_CSV) {
+			nuts.addAll(readNutsFromFile(nutFilename));
 		}
+		Model codelistModel = createNutsConceptScheme(nuts);
+		RDFDataMgr.write(new FileOutputStream(RDF_DIRECTORY + "nuts.ttl"), codelistModel, Lang.TURTLE);
 
 	}
 
-	private static Model createNutsConceptScheme(List<String> nutsValues) {
+	private static Set<String> readNutsFromFile(String nomFichier) {
+		Set<String> nuts = new HashSet<>();
+		try (FileReader fileReader = new FileReader(nomFichier)) {
+			CSVReader csvReader = new CSVReader(fileReader);
+			nuts = csvReader.readAll().stream().skip(1).map(line -> line[2]).collect(Collectors.toSet());
+			csvReader.close();
+		} catch (IOException e) {
+			logger.error(e);
+		}
+		return nuts;
+	}
+
+	private static Model createNutsConceptScheme(Set<String> nutsValues) {
 		Model clModel = ModelFactory.createDefaultModel();
 		clModel.setNsPrefix("rdfs", RDFS.getURI());
 		clModel.setNsPrefix("owl", OWL.getURI());

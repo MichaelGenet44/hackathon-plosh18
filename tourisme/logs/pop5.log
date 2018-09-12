@@ -10,3 +10,11 @@
 2018-09-12 10:17:06 - 3464 [main] INFO  CodelistMaker 	 import code list normal (feuille UNIT - nb cell 2)
 2018-09-12 10:17:06 - 3464 [main] INFO  CodelistMaker 	 import code list normal (feuille UNIT_MULT - nb cell 2)
 2018-09-12 10:17:06 - 3480 [main] INFO  CodelistMaker 	 importNuts
+2018-09-12 13:09:31 - 3479 [main] INFO  CodelistMaker 	 import code list normal (feuille C_RESID - nb cell 2)
+2018-09-12 13:09:31 - 3480 [main] INFO  CodelistMaker 	 import code list normal (feuille DEGURBA - nb cell 2)
+2018-09-12 13:09:31 - 3480 [main] INFO  CodelistMaker 	 import code list normal (feuille TERRTYPO - nb cell 2)
+2018-09-12 13:09:31 - 3495 [main] INFO  CodelistMaker 	 import code list normal (feuille OBS_STATUS - nb cell 2)
+2018-09-12 13:09:31 - 3511 [main] INFO  CodelistMaker 	 import code list normal (feuille CONF_STATUS - nb cell 2)
+2018-09-12 13:09:31 - 3511 [main] INFO  CodelistMaker 	 import code list normal (feuille UNIT - nb cell 2)
+2018-09-12 13:09:31 - 3527 [main] INFO  CodelistMaker 	 import code list normal (feuille UNIT_MULT - nb cell 2)
+2018-09-12 13:09:31 - 3542 [main] INFO  CodelistMaker 	 importNuts
