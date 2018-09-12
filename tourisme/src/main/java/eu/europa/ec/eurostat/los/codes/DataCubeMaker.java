@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
@@ -24,7 +25,7 @@ public class DataCubeMaker {
 
 	private static final String DATA_CSV = "src/main/resources/data/tourism-nuts-nace-r2-fr.csv";
 
-	private static final String RDF_DIRECTORY_DS = "src/main/resources/rdf/ds-";
+	private static final String RDF_DIRECTORY_DS = "src/main/resources/rdf/dsd-";
 
 	public static void main(String[] args) throws IOException {
 		traiterUneMeasure("occ_arr");
@@ -65,7 +66,7 @@ public class DataCubeMaker {
 				} 
 			}
 			reader.close();
-			RDFDataMgr.write(new FileOutputStream(RDF_DIRECTORY_DS + "tourisme-nuts-nacer2-"+measure+".ttl"), tourismDepModel, Lang.TURTLE);
+			RDFDataMgr.write(new FileOutputStream(RDF_DIRECTORY_DS + "tourisme-nuts-nacer2-"+StringUtils.remove(measure, "_")+".ttl"), tourismDepModel, Lang.TURTLE);
 			
 		
 		} catch (IOException e) {
@@ -99,6 +100,7 @@ public class DataCubeMaker {
 		observation.addProperty(unitAttributProperty, unitResource);
 		// Add measure
 		observation.addProperty(measureProperty, tourismDepModel.createTypedLiteral(nextLine.get("OBS_VALUE")));
+		
 	}
 
 
