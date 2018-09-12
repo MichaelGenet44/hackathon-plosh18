@@ -26,7 +26,7 @@ public class DataCubeMaker {
 
 	private static final String DATA_CSV = "src/main/resources/data/tourism-nuts-nace-r2-fr.csv";
 
-	private static final String RDF_DIRECTORY_DS = "src/main/resources/rdf/dsd-";
+	private static final String RDF_DIRECTORY_DS = "src/main/resources/rdf/ds-";
 
 	public static void main(String[] args) throws IOException {
 		traiterUneMeasure("occ_arr");
@@ -40,9 +40,9 @@ public class DataCubeMaker {
 			tourismDepModel.setNsPrefix("xsd", XSD.getURI());
 			tourismDepModel.setNsPrefix("qb", DataCubeOntology.getURI());
 
-			tourismDepModel.setNsPrefix("dim", "http://id.linked-open-statistics.org/meta/dimension/");
-			tourismDepModel.setNsPrefix("mes", "http://id.linked-open-statistics.org/meta/mesure/");
-			tourismDepModel.setNsPrefix("att", "http://id.linked-open-statistics.org/meta/attribute/");
+			tourismDepModel.setNsPrefix("dim", "http://id.insee.fr/meta/dimension/");
+			tourismDepModel.setNsPrefix("mes", "http://id.insee.fr/meta/mesure/");
+			tourismDepModel.setNsPrefix("att", "http://id.insee.fr/meta/attribute/");
 			tourismDepModel.setNsPrefix("sdmxdim", "http://purl.org/linked-data/sdmx/2009/dimension#");
 			
 			Resource tourismDataSet = tourismDepModel.createResource(Configuration.BASE_URI + "dataSet/tourism-nuts-nacer2-occ-arr", DataCubeOntology.DataSet);
