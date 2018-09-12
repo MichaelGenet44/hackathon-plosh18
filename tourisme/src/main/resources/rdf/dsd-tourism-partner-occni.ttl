@@ -9,7 +9,7 @@
         rdfs:range     <http://id.linked-open-statistics.org/concepts/C_resid> ;
         dc:identifier  "C_RESID"@fr ;
         qb:codeList    <http://id.linked-open-statistics.org/codes/c_resid> ;
-        qb:concept     <Label of the code list, not the concept> .
+        qb:concept     <http://id.linked-open-statistics.org/concepts/C_RESID> .
 
 <http://id.insee.fr/meta/attribute/conf_status>
         a              qb:CodedProperty , qb:AttributeProperty ;
@@ -27,17 +27,21 @@
         qb:codeList    <http://id.linked-open-statistics.org/codes/obs_status> ;
         qb:concept     <http://id.linked-open-statistics.org/concepts/OBS_STATUS> .
 
-<http://id.linked-open-statistics.org/concepts/NUTS>
-        a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
-        rdfs:label  "nuts"@fr .
-
 <http://id.insee.fr/meta/dimension/nace_r2>
         a              qb:CodedProperty , qb:DimensionProperty ;
         rdfs:label     "nace_r2"@fr ;
         rdfs:range     <http://id.linked-open-statistics.org/concepts/Nace_r2> ;
         dc:identifier  "NACE_R2"@fr ;
         qb:codeList    <http://id.linked-open-statistics.org/codes/nace_r2> ;
-        qb:concept     <NACE definition and not exactly the NACE Rév.2 definition.> .
+        qb:concept     <http://id.insee.fr/concepts/nafr2/groupe> .
+
+<http://id.linked-open-statistics.org/concepts/PARTNER>
+        a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label  "partner"@fr .
+
+<http://id.linked-open-statistics.org/concepts/C_RESID>
+        a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label  "c_resid"@fr .
 
 <http://id.linked-open-statistics.org/concepts/CONF_STATUS>
         a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
@@ -53,7 +57,7 @@
         rdfs:range     <http://id.linked-open-statistics.org/concepts/Partner> ;
         dc:identifier  "PARTNER"@fr ;
         qb:codeList    <http://id.linked-open-statistics.org/codes/partner> ;
-        qb:concept     <Label of the code list, not the concept> .
+        qb:concept     <http://id.linked-open-statistics.org/concepts/PARTNER> .
 
 <http://id.insee.fr/meta/dimension/nuts>
         a              qb:CodedProperty , qb:DimensionProperty ;
@@ -61,7 +65,7 @@
         rdfs:range     <http://id.linked-open-statistics.org/concepts/Nuts> ;
         dc:identifier  "NUTS"@fr ;
         qb:codeList    <http://id.linked-open-statistics.org/codes/nuts> ;
-        qb:concept     <http://id.linked-open-statistics.org/concepts/NUTS> .
+        qb:concept     <http://id.insee.fr/concepts/2112> .
 
 <http://id.insee.fr/meta/attribute/unit>
         a              qb:CodedProperty , qb:AttributeProperty ;
@@ -91,24 +95,24 @@
                 "Nights by NUTS, NACE_R2 and Country of residence"@en ;
         dc:identifier  "DSD-TOURISM-PARTNER-OCCNI"@fr ;
         qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/c_resid>
-                       ] ;
-        qb:component   [ a             qb:ComponentSpecification ;
                          qb:dimension  [ a  "http://purl.org/linked-data/sdmx/2009/dimension#timePeriod" ;
                                    a       qb:DimensionProperty ]
+                       ] ;
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/nace_r2>
+                       ] ;
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/partner>
+                       ] ;
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/c_resid>
                        ] ;
         qb:component   [ a                       qb:ComponentSpecification ;
                          qb:attribute            <http://id.insee.fr/meta/attribute/obs_status> ;
                          qb:componentAttachment  qb:Observation
                        ] ;
-        qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/nuts>
-                       ] ;
         qb:component   [ a           qb:ComponentSpecification ;
                          qb:measure  <http://id.insee.fr/meta/mesure/tourism_occni>
-                       ] ;
-        qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/partner>
                        ] ;
         qb:component   [ a                       qb:ComponentSpecification ;
                          qb:attribute            <http://id.insee.fr/meta/attribute/conf_status> ;
@@ -119,7 +123,7 @@
                          qb:componentAttachment  qb:Observation
                        ] ;
         qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/nace_r2>
+                         qb:dimension  <http://id.insee.fr/meta/dimension/nuts>
                        ] .
 
 <http://id.linked-open-statistics.org/concepts/UNIT>

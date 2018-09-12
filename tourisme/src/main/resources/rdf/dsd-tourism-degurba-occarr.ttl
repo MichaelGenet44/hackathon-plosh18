@@ -9,7 +9,7 @@
         rdfs:range     <http://id.linked-open-statistics.org/concepts/C_resid> ;
         dc:identifier  "C_RESID"@fr ;
         qb:codeList    <http://id.linked-open-statistics.org/codes/c_resid> ;
-        qb:concept     <Label of the code list, not the concept> .
+        qb:concept     <http://id.linked-open-statistics.org/concepts/C_RESID> .
 
 <http://id.insee.fr/meta/attribute/conf_status>
         a              qb:CodedProperty , qb:AttributeProperty ;
@@ -41,17 +41,17 @@
         <http://purl.org/dc/elements/1.1/description>
                 "An arrival is defined as a person (tourist) who arrives at a tourist accommodation establishment and checks in or arrives at non-rented accommodation. But in the scope of the Regulation concerning European statistics on tourism, this variable is not collected for the latter type of accommodation.\r\n\r\nStatistically there is not much difference if, instead of arrivals, departures are counted. No age limit is applied: children are counted as well as adults, even in the case when the overnight stays of children might be free of charge. Arrivals are registered by country of residence of the guest and by month. The arrivals of same-day visitors spending only a few hours during the day (no overnight stay, the date of arrival and departure are the same) at the establishment are excluded from accommodation statistics."@en .
 
-<http://id.linked-open-statistics.org/concepts/NUTS>
-        a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
-        rdfs:label  "nuts"@fr .
-
 <http://id.insee.fr/meta/dimension/nace_r2>
         a              qb:CodedProperty , qb:DimensionProperty ;
         rdfs:label     "nace_r2"@fr ;
         rdfs:range     <http://id.linked-open-statistics.org/concepts/Nace_r2> ;
         dc:identifier  "NACE_R2"@fr ;
         qb:codeList    <http://id.linked-open-statistics.org/codes/nace_r2> ;
-        qb:concept     <NACE definition and not exactly the NACE Rév.2 definition.> .
+        qb:concept     <http://id.insee.fr/concepts/nafr2/groupe> .
+
+<http://id.linked-open-statistics.org/concepts/C_RESID>
+        a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
+        rdfs:label  "c_resid"@fr .
 
 <http://id.linked-open-statistics.org/concepts/CONF_STATUS>
         a           rdfs:Class , <http://www.w3.org/2002/07/owl#Class> ;
@@ -78,7 +78,7 @@
         rdfs:range     <http://id.linked-open-statistics.org/concepts/Nuts> ;
         dc:identifier  "NUTS"@fr ;
         qb:codeList    <http://id.linked-open-statistics.org/codes/nuts> ;
-        qb:concept     <http://id.linked-open-statistics.org/concepts/NUTS> .
+        qb:concept     <http://id.insee.fr/concepts/2112> .
 
 <http://id.insee.fr/meta/attribute/unit>
         a              qb:CodedProperty , qb:AttributeProperty ;
@@ -95,35 +95,35 @@
                 "Nights by NUTS, NACE_R2 and Country of residence"@en ;
         dc:identifier  "DSD-TOURISM-DEGURBA-OCCARR"@fr ;
         qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/c_resid>
+                         qb:dimension  [ a  "http://purl.org/linked-data/sdmx/2009/dimension#timePeriod" ;
+                                   a       qb:DimensionProperty ]
                        ] ;
         qb:component   [ a           qb:ComponentSpecification ;
                          qb:measure  <http://id.insee.fr/meta/mesure/tourism_occarr>
-                       ] ;
-        qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/nace_r2>
                        ] ;
         qb:component   [ a                       qb:ComponentSpecification ;
                          qb:attribute            <http://id.insee.fr/meta/attribute/unit> ;
                          qb:componentAttachment  qb:Observation
                        ] ;
-        qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/nuts>
+        qb:component   [ a                       qb:ComponentSpecification ;
+                         qb:attribute            <http://id.insee.fr/meta/attribute/conf_status> ;
+                         qb:componentAttachment  qb:Observation
                        ] ;
         qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  [ a  "http://purl.org/linked-data/sdmx/2009/dimension#timePeriod" ;
-                                   a       qb:DimensionProperty ]
-                       ] ;
-        qb:component   [ a             qb:ComponentSpecification ;
-                         qb:dimension  <http://id.insee.fr/meta/dimension/degurba>
+                         qb:dimension  <http://id.insee.fr/meta/dimension/c_resid>
                        ] ;
         qb:component   [ a                       qb:ComponentSpecification ;
                          qb:attribute            <http://id.insee.fr/meta/attribute/obs_status> ;
                          qb:componentAttachment  qb:Observation
                        ] ;
-        qb:component   [ a                       qb:ComponentSpecification ;
-                         qb:attribute            <http://id.insee.fr/meta/attribute/conf_status> ;
-                         qb:componentAttachment  qb:Observation
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/nace_r2>
+                       ] ;
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/nuts>
+                       ] ;
+        qb:component   [ a             qb:ComponentSpecification ;
+                         qb:dimension  <http://id.insee.fr/meta/dimension/degurba>
                        ] .
 
 <http://id.linked-open-statistics.org/concepts/UNIT>

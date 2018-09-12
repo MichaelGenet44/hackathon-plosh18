@@ -1,6 +1,7 @@
 package eu.europa.ec.eurostat.los.tourisme;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -46,7 +47,7 @@ public class DSDModelMakerOccni {
 	/** Names of the Excel files containing the TOURISM data and metadata
 	 * The source file is at https://github.com/LOS-ESSnet/Paris-Hackathon/blob/master/data/tourism-fr.md */
 	public final static String TOURISM_DATA_FILE_NAME = "src/main/resources/data/tourism-nuts-nace-r2-fr.csv";
-	public final static String TOURISM_METADATA_FILE_NAME = "src/main/resources/data/tourism-fr-dsd-1.xls";
+	public final static String TOURISM_METADATA_FILE_NAME = "src/main/resources/data/tourism-fr-dsd-2.xls";
 	
 	/** Prefix mappings */
 	public static Map<String, String> DSD_PREFIXES = new HashMap<String, String>();
@@ -105,14 +106,13 @@ public class DSDModelMakerOccni {
 	public static void main(String[] args) throws Exception {
 		wb = new HSSFWorkbook(new FileInputStream(TOURISM_METADATA_FILE_NAME));
 
-//		String dsdName = "nuts-nacer2-occni";
-//		String sheetName = "DSD-tourism_nuts_nace_r2";
-//		String dsdName = "degurba-occni";
-//		String sheetName = "DSD-tourism-degurba";
-//		String dsdName = "terrtypo-occni";
-//		String sheetName = "DSD-tourism-terrtypo";
-		String dsdName = "partner-occni";
-		String sheetName = "DSD-tourism-partner";
+		genererDsdNuit("nuts-nacer2-occni", "DSD-tourism_nuts_nace_r2");
+		genererDsdNuit("degurba-occni",  "DSD-tourism-degurba");
+		genererDsdNuit("terrtypo-occni",  "DSD-tourism-terrtypo");
+		genererDsdNuit("partner-occni",  "DSD-tourism-partner");
+	}
+
+	private static void genererDsdNuit(String dsdName, String sheetName) throws FileNotFoundException {
 		Model tourismeNutsNacer2 = getTourismeNutsNacer2Model(sheetName,dsdName);
 		RDFDataMgr.write(new FileOutputStream("src/main/resources/rdf/dsd-tourism-"+dsdName+".ttl"), tourismeNutsNacer2, Lang.TURTLE);
 	}

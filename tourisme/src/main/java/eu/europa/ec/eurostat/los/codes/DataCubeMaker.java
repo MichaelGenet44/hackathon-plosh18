@@ -9,10 +9,14 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.NodeIterator;
 import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
+import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.XSD;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,18 +28,27 @@ import eu.europa.ec.eurostat.los.utils.DataCubeOntology;
 public class DataCubeMaker {
 	private static Logger logger = LogManager.getLogger(DataCubeMaker.class);
 
-	private static final String DATA_CSV = "src/main/resources/data/tourism-nuts-nace-r2-fr.csv";
-
 	private static final String RDF_DIRECTORY_DS = "src/main/resources/rdf/ds-";
 
 	public static void main(String[] args) throws IOException {
-		traiterUneMeasure("occ_arr");
-		traiterUneMeasure("occ_ni");
+
+		traiterUneMeasure("nuts-nacer2", "occ_arr", "src/main/resources/data/tourism-nuts-nace-r2-fr.csv");
+		traiterUneMeasure("nuts-nacer2", "occ_ni", "src/main/resources/data/tourism-nuts-nace-r2-fr.csv");
+
+		traiterUneMeasure("degurba", "occ_arr", "src/main/resources/data/tourism-degurba-fr.csv");
+		traiterUneMeasure("degurba", "occ_ni", "src/main/resources/data/tourism-degurba-fr.csv");
+
+		traiterUneMeasure("partner", "occ_arr", "src/main/resources/data/tourism-partner-fr.csv");
+		traiterUneMeasure("partner", "occ_ni", "src/main/resources/data/tourism-partner-fr.csv");
+
+		traiterUneMeasure("terrtypo", "occ_arr", "src/main/resources/data/tourism-terrtypo-fr.csv");
+		traiterUneMeasure("terrtypo", "occ_ni", "src/main/resources/data/tourism-terrtypo-fr.csv");
 	}
 
-	private static void traiterUneMeasure(String measure) {
-		try (FileReader fileReader = new FileReader(DATA_CSV)) {
-	
+	private static void traiterUneMeasure(String typeDsd, String measure, String csvFile) {
+		logger.info(String.format("traiterUneMeasure %s %s %s",typeDsd, measure, csvFile));
+		try (FileReader fileReader = new FileReader(csvFile)) {
+
 			Model tourismDepModel = ModelFactory.createDefaultModel();
 			tourismDepModel.setNsPrefix("xsd", XSD.getURI());
 			tourismDepModel.setNsPrefix("qb", DataCubeOntology.getURI());
@@ -44,66 +57,105 @@ public class DataCubeMaker {
 			tourismDepModel.setNsPrefix("mes", "http://id.linked-open-statistics.org/meta/mesure/");
 			tourismDepModel.setNsPrefix("att", "http://id.linked-open-statistics.org/meta/attribute/");
 			tourismDepModel.setNsPrefix("sdmxdim", "http://purl.org/linked-data/sdmx/2009/dimension#");
-			
-			Resource tourismDataSet = tourismDepModel.createResource(Configuration.BASE_URI + "dataSet/tourism-nuts-nacer2-occ-arr", DataCubeOntology.DataSet);
-	
-			// Dimensions and measure
-			Property cresidDimensionProperty = tourismDepModel.createProperty(Configuration.componentURI("dimension", "C_RESID"));
-			Property nutsDimensionProperty = tourismDepModel.createProperty(Configuration.componentURI("dimension", "NUTS"));
-			Property nacer2DimensionProperty = tourismDepModel.createProperty(Configuration.componentURI("dimension", "NACE_R2"));
-			Property timePeriodDimensionProperty = tourismDepModel.createProperty("http://purl.org/linked-data/sdmx/2009/dimension#timePeriod");
-			Property measureProperty = tourismDepModel.createProperty(Configuration.componentURI("mesure", "MEASURE"));
-			//Property observationProperty = tourismDepModel.createProperty(Configuration.componentURI("dimension", "OBS_VALUE"));
 
-			Property obsStatusAttributProperty = tourismDepModel.createProperty(Configuration.componentURI("attribute", "OBS_STATUS"));
-			Property confStatusAttributProperty = tourismDepModel.createProperty(Configuration.componentURI("attribute", "CONF_STATUS"));
-			Property unitAttributProperty = tourismDepModel.createProperty(Configuration.componentURI("attribute", "UNIT"));
-			
+			String dataSetName = typeDsd + "-" + StringUtils.remove(measure, "_");
+			Resource tourismDataSet = tourismDepModel.createResource(
+					Configuration.BASE_URI + "dataSet/tourism-" + dataSetName, DataCubeOntology.DataSet);
+
+			Model modelDsd = ModelFactory.createDefaultModel();
+			modelDsd.read("src/main/resources/rdf/dsd-tourism-" + dataSetName + ".ttl");
+
+			// Dimensions and measure
+//			Property cresidDimensionProperty = tourismDepModel.createProperty(Configuration.componentURI("dimension", "C_RESID"));
+//			Property nutsDimensionProperty = tourismDepModel.createProperty(Configuration.componentURI("dimension", "NUTS"));
+//			Property nacer2DimensionProperty = tourismDepModel.createProperty(Configuration.componentURI("dimension", "NACE_R2"));
+//			Property timePeriodDimensionProperty = tourismDepModel.createProperty("http://purl.org/linked-data/sdmx/2009/dimension#timePeriod");
+//			Property measureProperty = tourismDepModel.createProperty(Configuration.componentURI("mesure", "MEASURE"));
+//			//Property observationProperty = tourismDepModel.createProperty(Configuration.componentURI("dimension", "OBS_VALUE"));
+//
+//			Property obsStatusAttributProperty = tourismDepModel.createProperty(Configuration.componentURI("attribute", "OBS_STATUS"));
+//			Property confStatusAttributProperty = tourismDepModel.createProperty(Configuration.componentURI("attribute", "CONF_STATUS"));
+//			Property unitAttributProperty = tourismDepModel.createProperty(Configuration.componentURI("attribute", "UNIT"));
+
 			CSVReaderHeaderAware reader = new CSVReaderHeaderAware(fileReader);
 			Map<String, String> nextLine;
 			while ((nextLine = reader.readMap()) != null) {
 				if (measure.equals(nextLine.get("MEASURE"))) {
-					//traiterLigneArrivee(nextLine,tourismDepModel,tourismDataSet);
-					traiterLigne(tourismDepModel, tourismDataSet, cresidDimensionProperty, nutsDimensionProperty,
-							nacer2DimensionProperty, timePeriodDimensionProperty, measureProperty,
-							obsStatusAttributProperty, confStatusAttributProperty, unitAttributProperty, nextLine);
-				} 
+					// traiterLigneArrivee(nextLine,tourismDepModel,tourismDataSet);
+					traiterLigne(tourismDepModel, tourismDataSet, nextLine, modelDsd);
+				}
 			}
 			reader.close();
-			RDFDataMgr.write(new FileOutputStream(RDF_DIRECTORY_DS + "tourism-nuts-nacer2-"+StringUtils.remove(measure, "_")+".ttl"), tourismDepModel, Lang.TURTLE);
-			
-		
+			RDFDataMgr.write(new FileOutputStream(RDF_DIRECTORY_DS + "tourism-" + dataSetName + ".ttl"),
+					tourismDepModel, Lang.TURTLE);
+
 		} catch (IOException e) {
 			logger.error(e);
 		}
 	}
 
-	private static void traiterLigne(Model tourismDepModel, Resource tourismDataSet,
-			Property cresidDimensionProperty, Property nutsDimensionProperty, Property nacer2DimensionProperty,
-			Property timePeriodDimensionProperty, Property measureProperty, Property obsStatusAttributProperty,
-			Property confStatusAttributProperty, Property unitAttributProperty, Map<String, String> nextLine) {
-		Resource observation = tourismDepModel.createResource(Configuration.observationURI(nextLine.get("OBS_VALUE")), DataCubeOntology.Observation);
+	private static void traiterLigne(Model tourismDepModel, Resource tourismDataSet, Map<String, String> nextLine,
+			Model modelDsd) {
+		Resource observation = tourismDepModel.createResource(Configuration.observationURI(nextLine.get("OBS_VALUE")),
+				DataCubeOntology.Observation);
 		observation.addProperty(DataCubeOntology.dataSet, tourismDataSet);
-		
 
-		// Add dimension values
-		
-		Resource cResidResource = tourismDepModel.createResource(Configuration.codeItemURI("C_RESID", nextLine.get("C_RESID")));
-		observation.addProperty(cresidDimensionProperty, cResidResource);
-		Resource nutsResource = tourismDepModel.createResource(Configuration.codeItemURI("NUTS", nextLine.get("NUTS")));
-		observation.addProperty(nutsDimensionProperty, nutsResource);
-		Resource nacer2Resource = tourismDepModel.createResource(Configuration.codeItemURI("NACE_R2", nextLine.get("NACE_R2")));
-		observation.addProperty(nacer2DimensionProperty, nacer2Resource);
-		observation.addProperty(timePeriodDimensionProperty, tourismDepModel.createTypedLiteral(nextLine.get("TIME_PERIOD"), XSDDatatype.XSDgYear));
-		Resource obsStatusResource = tourismDepModel.createResource(Configuration.codeItemURI("OBS_STATUS", nextLine.get("OBS_STATUS")));
-		observation.addProperty(obsStatusAttributProperty, obsStatusResource);
-		Resource confStatusResource = tourismDepModel.createResource(Configuration.codeItemURI("CONF_STATUS", nextLine.get("CONF_STATUS")));
-		observation.addProperty(confStatusAttributProperty, confStatusResource);
-		Resource unitResource = tourismDepModel.createResource(Configuration.codeItemURI("UNIT", nextLine.get("UNIT")));
-		observation.addProperty(unitAttributProperty, unitResource);
+//		ResIterator attribIt = modelDsd.listResourcesWithProperty(DataCubeOntology.attribute);
+//		ResIterator dimIt = modelDsd.listResourcesWithProperty(DataCubeOntology.dimension);
+		// ResIterator measureIt =
+		// modelDsd.listResourcesWithProperty(DataCubeOntology.measure);
+
+		NodeIterator measureIt = modelDsd.listObjectsOfProperty(DataCubeOntology.measure);
+		while (measureIt.hasNext()) {
+			RDFNode mes = measureIt.next();
+			logger.info(mes.toString());
+			logger.info(mes.asResource().getLocalName());
+			logger.info(mes.asResource().getURI());
+			logger.info(mes.asResource().getNameSpace());
+			// Property dimensionProperty =
+			// tourismDepModel.createProperty(Configuration.componentURI("dimension",
+			// dim.asLiteral().getString()));
+		}
+		NodeIterator attrIt = modelDsd.listObjectsOfProperty(DataCubeOntology.attribute);
+		while (attrIt.hasNext()) {
+			RDFNode att = attrIt.next();
+			String localNameUC = att.asResource().getLocalName().toUpperCase();
+			logger.info(localNameUC);
+
+			Resource resource = tourismDepModel
+					.createResource(Configuration.codeItemURI(localNameUC, nextLine.get(localNameUC)));
+			Property property = tourismDepModel.createProperty(Configuration.componentURI("attribute", localNameUC));
+			observation.addProperty(property, resource);
+
+		}
+		ResIterator dimIt = modelDsd.listResourcesWithProperty(RDF.type, DataCubeOntology.DimensionProperty);
+		while (dimIt.hasNext()) {
+			Resource dim = dimIt.next();
+			logger.info(dim.toString());
+			if (StringUtils.isNoneEmpty(dim.getLocalName())) {
+
+				String localNameUC = dim.getLocalName().toUpperCase();
+				logger.info(localNameUC);
+				Resource resource = tourismDepModel
+						.createResource(Configuration.codeItemURI(localNameUC, nextLine.get(localNameUC)));
+				Property property = tourismDepModel
+						.createProperty(Configuration.componentURI("dimension", localNameUC));
+
+				observation.addProperty(property, resource);
+			} else {
+				logger.info("timePeriodProperty");
+				Property timePeriodProperty = tourismDepModel
+						.createProperty("http://purl.org/linked-data/sdmx/2009/dimension#timePeriod");
+				observation.addProperty(timePeriodProperty,
+						tourismDepModel.createTypedLiteral(nextLine.get("TIME_PERIOD"), XSDDatatype.XSDgYear));
+			}
+
+		}
+		Property measureProperty = tourismDepModel.createProperty(Configuration.componentURI("mesure", "MEASURE"));
+
 		// Add measure
-		observation.addProperty(measureProperty, tourismDepModel.createTypedLiteral(Integer.valueOf(nextLine.get("OBS_VALUE"))));
+		observation.addProperty(measureProperty,
+				tourismDepModel.createTypedLiteral(Integer.valueOf(nextLine.get("OBS_VALUE"))));
 	}
 
-	
 }

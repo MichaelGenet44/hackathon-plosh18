@@ -1,0 +1,9 @@
+@prefix att:   <http://id.linked-open-statistics.org/meta/attribute/> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix sdmxdim: <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dim:   <http://id.linked-open-statistics.org/meta/dimension/> .
+@prefix mes:   <http://id.linked-open-statistics.org/meta/mesure/> .
+
+<http://id.linked-open-statistics.org/dataSet/tourism-degurba-occarr>
+        a       qb:DataSet .
