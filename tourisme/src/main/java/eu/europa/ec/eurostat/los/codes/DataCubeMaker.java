@@ -66,7 +66,7 @@ public class DataCubeMaker {
 				} 
 			}
 			reader.close();
-			RDFDataMgr.write(new FileOutputStream(RDF_DIRECTORY_DS + "tourisme-nuts-nacer2-"+StringUtils.remove(measure, "_")+".ttl"), tourismDepModel, Lang.TURTLE);
+			RDFDataMgr.write(new FileOutputStream(RDF_DIRECTORY_DS + "tourism-nuts-nacer2-"+StringUtils.remove(measure, "_")+".ttl"), tourismDepModel, Lang.TURTLE);
 			
 		
 		} catch (IOException e) {
